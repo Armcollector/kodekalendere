@@ -12,7 +12,9 @@ G)H
 D)I
 E)J
 J)K
-K)L"""
+K)L
+K)YOU
+I)SAN"""
 
 x = """762)NDB
 PYQ)MMW
@@ -1791,5 +1793,5 @@ for a in g.nodes():
     s+= len(nx.shortest_path(g,a,'COM')) -1
 
 
-print(s)
-print(len(nx.shortest_path(g,'YOU','SAN')) -1)
+print(nx.shortest_path(g,'YOU','SAN'))
+print(len(nx.shortest_path(g,'YOU','SAN')) -3)
