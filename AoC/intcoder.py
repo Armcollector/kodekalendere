@@ -15,7 +15,7 @@ class IntCoder:
         self.outputs = []
         self.i = 0
         self.halted = False
-        self.name = None
+        self.name = name
 
     def jump_if_true(self,i, ps=[0,0,0]):
         p1 = self.x[i + 1] if ps[0] else self.x[self.x[i + 1]]
@@ -137,7 +137,7 @@ if __name__ == '__main__':
 
     
     # initialize machines:
-    amplifiers = [IntCoder(comp, [p],name ) for p,name in zip(ph,names)]
+    amplifiers = [IntCoder(comp, [p], name ) for p,name in zip(ph,names)]
 
 
     assert len(amplifiers) == 5
