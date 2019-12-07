@@ -145,15 +145,16 @@ if __name__ == '__main__':
 
     _input = 0
 
+    while True:
     
-    for m in amplifiers:
-        m.add_input(_input)
-        m.produce_output()
-        if m.halted:
-            print(m.name, "halted")
-        else:
-            _input = m.popout()
-            print(m.name, " outputs ", _input)
+        for m in amplifiers:
+            m.add_input(_input)
+            m.produce_output()
+            if m.halted:
+                print(m.name, "halted")
+            else:
+                _input = m.popout()
+                print(m.name, " outputs ", _input)
 
     # active_machine = 0
     # _input = 0
