@@ -148,6 +148,10 @@ if __name__ == '__main__':
     _input = 0
 
     
+    _mx = 0
+
+    E_output = 0
+
     while not any(a.halted for a in amplifiers):
     
         for m in amplifiers:
@@ -159,6 +163,11 @@ if __name__ == '__main__':
             else:
                 _input = m.popout()
                 print(m.name, " outputs ", _input)
+                if m.name == 'E':
+                    E_output = _input
+
+    
+    print(E_output)
 
     # active_machine = 0
     # _input = 0
