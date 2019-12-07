@@ -1,3 +1,5 @@
+from collections import  deque
+
 class IntCoder:
 
     def __init__(self, x, inputs = [], name = None):
@@ -11,7 +13,7 @@ class IntCoder:
                     7: self.less_than,
                     8: self.equals
                     }
-        self.inputs = list(reversed(inputs))
+        self.inputs = deque(list(reversed(inputs)))
         self.outputs = []
         self.i = 0
         self.halted = False
