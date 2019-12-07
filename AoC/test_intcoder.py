@@ -64,6 +64,9 @@ def test_day7_part2():
     # initialize machines:
     amplifiers = [IntCoder(comp, [p] ) for p in ph]
 
+
+    assert len(amplifiers) == 5
+
     # active_machine = 0
     # _input = 0
     # while not amplifiers[active_machine].halted:
