@@ -118,3 +118,6 @@ class IntCoder:
             self.i = self.ops[op](self.i,ps)
 
         return self.outputs.pop() if self.outputs else None 
+
+    def add_input(self,_inp):
+        self.inputs.append(_inp)
