@@ -120,6 +120,7 @@ class IntCoder:
 
 
     def add_input(self,_inp):
+        print(self.name, "receives", _inp)
         self.inputs.append(_inp)
 
     
