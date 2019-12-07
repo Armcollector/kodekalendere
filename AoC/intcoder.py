@@ -137,6 +137,7 @@ if __name__ == '__main__':
 
     for ph in permutations(ph):
 
+        print(ph)
         names = 'ABCDE'
 
         
@@ -157,11 +158,9 @@ if __name__ == '__main__':
         
             for m in amplifiers:
                 m.add_input(_input)
-                print(m.name, "has inputs", m.inputs )
                 m.produce_output()
                 if not m.halted:
                     _input = m.popout()
-                    print(m.name, " outputs ", _input)
                     if m.name == 'E':
                         E_output = _input
 
