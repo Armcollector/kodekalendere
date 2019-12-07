@@ -159,13 +159,11 @@ if __name__ == '__main__':
                 m.add_input(_input)
                 print(m.name, "has inputs", m.inputs )
                 m.produce_output()
-                # if m.halted:
-                #     print(m.name, "halted")
-                # else:
-                _input = m.popout()
-                print(m.name, " outputs ", _input)
-                if m.name == 'E':
-                    E_output = _input
+                if not m.halted:
+                    _input = m.popout()
+                    print(m.name, " outputs ", _input)
+                    if m.name == 'E':
+                        E_output = _input
 
         _mx = max(_mx, E_output)    
         
