@@ -83,6 +83,7 @@ class IntCoder:
     def out(self, i, ps=[0, 0, 0]):
         p1 = self.x[i + 1] if ps[0] else self.x[self.x[i + 1]]
         self.outputs.append(p1)
+        print(p1)
         return i + 2
 
     def popout(self):
