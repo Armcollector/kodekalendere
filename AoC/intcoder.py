@@ -76,6 +76,7 @@ class IntCoder:
             _in = int(input("Enter input: "))
         else:
             _in = self.inputs.popleft()
+        print(self.name, "uses input:", _in)
         self.x[self.x[i + 1]] = _in
         return i + 2
 
@@ -144,6 +145,7 @@ if __name__ == '__main__':
     
     # initialize machines:
     amplifiers = [IntCoder(comp, [p], name ) for p,name in zip(ph,names)]
+
 
 
     assert len(amplifiers) == 5
