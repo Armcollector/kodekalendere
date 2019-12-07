@@ -90,7 +90,7 @@ class IntCoder:
     def parameters(self, opcode):
         p = []
         opcode //= 100
-        for i in range(3):
+        for _ in range(3):
             p.append(opcode % 10)
             opcode //= 10
         return p
