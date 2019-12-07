@@ -145,7 +145,8 @@ if __name__ == '__main__':
 
     _input = 0
 
-    while True:
+    
+    while not any(a.halted for a in amplifiers):
     
         for m in amplifiers:
             m.add_input(_input)
