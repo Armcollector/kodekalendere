@@ -1,3 +1,12 @@
 {
-    "python.pythonPath": "c:\\git\\kodekalendere\\.env\\Scripts\\python.exe"
+    "python.pythonPath": "c:\\git\\kodekalendere\\.env\\Scripts\\python.exe",
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": ".*",
+                "isAsync": true,
+                "cmd": "pytest && git commit -am 'working' || git reset --hard"
+            }
+        ]
+    }
 }

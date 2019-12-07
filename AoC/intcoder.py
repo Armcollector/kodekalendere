@@ -117,4 +117,4 @@ class IntCoder:
 
             self.i = self.ops[op](self.i,ps)
 
-        return self.outputs.pop() if self.outputs else None
+        return self.outputs.pop() if self.outputs else None 
