@@ -152,6 +152,7 @@ if __name__ == '__main__':
     
         for m in amplifiers:
             m.add_input(_input)
+            print(m.name, "has inputs", m.inputs )
             m.produce_output()
             if m.halted:
                 print(m.name, "halted")
