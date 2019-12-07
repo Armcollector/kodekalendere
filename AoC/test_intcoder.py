@@ -50,38 +50,5 @@ def test_day5_part2():
 
     assert machine.popout() == 11956381
 
-def test_day7_part2():
-    
 
-    comp = [3,52,1001,52,-5,52,3,53,1,52,56,54,1007,54,5,55,1005,55,26,1001,54,-5,54,1105,1,12,1,53,54,53,1008,54,0,55,1001,55,1,55,2,53,55,53,4,53,1001,56,-1,56,1005,56,6,99,0,0,0,0,10]
-    ph = [9,7,8,5,6]
-
-
-    #for ph in permutations(phases):
-
-
-    
-    # initialize machines:
-    amplifiers = [IntCoder(comp, [p] ) for p in ph]
-
-
-    assert len(amplifiers) == 5
-
-    #for m in amplifiers:
-        
-
-    # active_machine = 0
-    # _input = 0
-    # while not amplifiers[active_machine].halted:
-    #     amplifiers[active_machine].inputs.append(_input)
-    #     _output = amplifiers[active_machine].produce_output()
-
-    #     if _output == None:
-    #         print(input)
-    #         break
-    #     else:
-    #         _input=_output
-    #         active_machine = (active_machine +1)%5
-
-    # print(active_machine, _input) 
 
