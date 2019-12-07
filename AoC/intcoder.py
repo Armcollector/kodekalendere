@@ -13,7 +13,7 @@ class IntCoder:
                     7: self.less_than,
                     8: self.equals
                     }
-        self.inputs = deque(list(reversed(inputs)))
+        self.inputs = deque(inputs)
         self.outputs = []
         self.i = 0
         self.halted = False
@@ -74,7 +74,7 @@ class IntCoder:
         if not self.inputs:
             _in = int(input("Enter input: "))
         else:
-            _in = self.inputs.pop()
+            _in = self.inputs.popleft()
         self.x[self.x[i + 1]] = _in
         return i + 2
 
