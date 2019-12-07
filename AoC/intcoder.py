@@ -148,7 +148,9 @@ if __name__ == '__main__':
     for m in amplifiers:
         m.add_input(_input)
         m.produce_output()
-
+        if m.halted:
+            print(m.name, "halted")
+        
         
 
     # active_machine = 0
