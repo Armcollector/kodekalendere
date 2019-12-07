@@ -86,6 +86,7 @@ class IntCoder:
         return i + 2
 
     def popout(self):
+        print(self.name, "outputs", self.outputs[-1])
         return self.outputs.pop()
 
     def parameters(self, opcode):
