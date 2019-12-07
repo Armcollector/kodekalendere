@@ -67,6 +67,9 @@ def test_day7_part2():
 
     assert len(amplifiers) == 5
 
+    #for m in amplifiers:
+        
+
     # active_machine = 0
     # _input = 0
     # while not amplifiers[active_machine].halted:
