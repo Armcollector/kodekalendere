@@ -1,6 +1,6 @@
 class IntCoder:
 
-    def __init__(self, x, inputs = []):
+    def __init__(self, x, inputs = [], name = None):
         self.x = x
         self.ops = {1: self.add,
                     2: self.mul,
@@ -15,6 +15,7 @@ class IntCoder:
         self.outputs = []
         self.i = 0
         self.halted = False
+        self.name = None
 
     def jump_if_true(self,i, ps=[0,0,0]):
         p1 = self.x[i + 1] if ps[0] else self.x[self.x[i + 1]]
@@ -117,7 +118,50 @@ class IntCoder:
 
             self.i = self.ops[op](self.i,ps)
 
-        return self.outputs.pop() if self.outputs else None 
 
     def add_input(self,_inp):
         self.inputs.append(_inp)
+
+    
+
+
+if __name__ == '__main__':
+
+    comp = [3,52,1001,52,-5,52,3,53,1,52,56,54,1007,54,5,55,1005,55,26,1001,54,-5,54,1105,1,12,1,53,54,53,1008,54,0,55,1001,55,1,55,2,53,55,53,4,53,1001,56,-1,56,1005,56,6,99,0,0,0,0,10]
+    ph = [9,7,8,5,6]
+
+
+    #for ph in permutations(phases):
+
+    names = 'ABCDE'
+
+    
+    # initialize machines:
+    amplifiers = [IntCoder(comp, [p],name ) for p,name in zip(ph,names)]
+
+
+    assert len(amplifiers) == 5
+
+    _input = 0
+
+
+    for m in amplifiers:
+        m.add_input(_input)
+        m.produce_output()
+
+        
+
+    # active_machine = 0
+    # _input = 0
+    # while not amplifiers[active_machine].halted:
+    #     amplifiers[active_machine].inputs.append(_input)
+    #     _output = amplifiers[active_machine].produce_output()
+
+    #     if _output == None:
+    #         print(input)
+    #         break
+    #     else:
+    #         _input=_output
+    #         active_machine = (active_machine +1)%5
+
+    # print(active_machine, _input) 
