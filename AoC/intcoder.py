@@ -123,6 +123,7 @@ class IntCoder:
 
             self.i = self.ops[op](self.i,ps)
 
+        print("pointer at ", self.i)
 
     def add_input(self,_inp):
         print(self.name, "receives", _inp)
