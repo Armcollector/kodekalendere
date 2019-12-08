@@ -58,6 +58,11 @@ def test_day4_p2_equal():
 
     assert machine.popout() == 1
 
+def test_day4_p2_not_equal():
+    comp = [3,9,8,9,10,9,4,9,99,-1,8]
+    machine = IntCoder(comp, [9])
+    machine.intcode()
 
+    assert machine.popout() == 0
 
 
