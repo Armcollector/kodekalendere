@@ -92,3 +92,18 @@ def test_jump_test2():
     machine.intcode()
 
     assert machine.popout() == 1
+
+
+def test_jump_test_im():
+    comp =[3,12,6,12,15,1,13,14,13,4,13,99,-1,0,1,9]
+    machine = IntCoder(comp, [0])
+    machine.intcode()
+
+    assert machine.popout() == 0
+
+def test_jump_test2_im():
+    comp =[3,12,6,12,15,1,13,14,13,4,13,99,-1,0,1,9]
+    machine = IntCoder(comp, [1])
+    machine.intcode()
+
+    assert machine.popout() == 1    
