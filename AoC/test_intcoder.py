@@ -31,7 +31,7 @@ def test_day7_part1_e1():
     assert _mx == 43210
 
 
-def test_day7_part1_e1():
+def test_day7_part1_e2():
     comp = [3,23,3,24,1002,24,10,24,1002,23,-1,23,101,5,23,23,1,24,23,23,4,23,99,0,0]
     phases =[3,1,2,4,0]
     _mx = 0
