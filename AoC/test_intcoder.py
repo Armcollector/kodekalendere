@@ -114,3 +114,7 @@ def test_big_jump():
     machine = IntCoder(comp, [5])
     machine.intcode()
     assert machine.popout() == 999
+
+    machine = IntCoder(comp, [8])
+    machine.intcode()
+    assert machine.popout() == 1000
