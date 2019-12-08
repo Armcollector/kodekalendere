@@ -28,7 +28,7 @@ def test_day7_part1_e1():
             _input = A.outputs.pop()
         _mx = max(_mx,_input)
     
-    
+    assert _mx == 43210
 
 
 def test_day2_part1():
