@@ -8,5 +8,11 @@
                 "cmd": "pytest && git commit -am 'working' || git reset --hard"
             }
         ]
-    }
+    },
+    "python.testing.pytestArgs": [
+        "AoC"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
 }
