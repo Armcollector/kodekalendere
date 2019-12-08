@@ -86,7 +86,7 @@ def test_jump_test():
 
     assert machine.popout() == 0
 
-def test_jump_test():
+def test_jump_test2():
     comp =[3,12,6,12,15,1,13,14,13,4,13,99,-1,0,1,9]
     machine = IntCoder(comp, [1])
     machine.intcode()
