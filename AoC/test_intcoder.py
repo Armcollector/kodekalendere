@@ -51,12 +51,13 @@ def test_day5_part2():
     assert machine.popout() == 11956381
 
 
-def test_day4_p2_e1():
+def test_day4_p2_equal():
     comp = [3,9,8,9,10,9,4,9,99,-1,8]
     machine = IntCoder(comp, [8])
     machine.intcode()
 
     assert machine.popout() == 1
 
-    
+
+
 
