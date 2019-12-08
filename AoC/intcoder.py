@@ -83,10 +83,10 @@ class IntCoder:
     def out(self, i, ps=[0, 0, 0]):
         p1 = self.x[i + 1] if ps[0] else self.x[self.x[i + 1]]
         self.outputs.append(p1)
+        print(self.name, "outputs", self.outputs[-1])
         return i + 2
 
     def popout(self):
-        print(self.name, "outputs", self.outputs[-1])
         return self.outputs.pop()
 
     def parameters(self, opcode):
