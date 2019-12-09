@@ -163,8 +163,6 @@ def day7():
     _mx = 0
 
     #for ph in permutations(ph):
-
-    print(ph)
     names = 'ABCDE'
 
     
