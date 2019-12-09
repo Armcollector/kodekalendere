@@ -5,7 +5,7 @@
             {
                 "match": ".*",
                 "isAsync": true,
-                "cmd": "pytest && git commit -am 'working' || git reset --hard"
+                "cmd": "pytest --durations=0 && git commit -am 'working' || git reset --hard"
             }
         ]
     },
