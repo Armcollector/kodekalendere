@@ -223,6 +223,6 @@ def test_day7p2():
                 if m.name == 'E':
                     E_output = _input
 
-    assert E_output
+    assert E_output == 76211147
     
     
