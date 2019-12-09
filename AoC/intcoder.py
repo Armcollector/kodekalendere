@@ -22,13 +22,14 @@ class IntCoder:
         self.name = name
         self.relative_base=0
 
-    def parameter(self, pnr, ps):
+    def parameter(self, pnr, ps,assignment=False):
         if ps[pnr-1] == 0:
             return self.x[self.x[self.i + pnr]]
         if ps[pnr-1] == 1:
             return self.x[self.i+pnr]
         if ps[pnr-1] == 2:
-            return self.x[self.x[self.i + pnr]+self.relative_base]
+            if not assignment:
+                return self.x[self.x[self.i + pnr]+self.relative_base]
 
         raise NotImplementedError
 
