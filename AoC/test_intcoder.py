@@ -169,3 +169,10 @@ def test_big_jump():
     machine = IntCoder(comp, [9])
     machine.intcode()
     assert machine.popout() == 1001
+
+
+def test_relative():
+    comp= [109,19]
+    machine = IntCoder(comp)
+    machine.relative_base = 2000
+    
