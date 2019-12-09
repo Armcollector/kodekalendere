@@ -159,7 +159,7 @@ def day7():
     
     comp = [3,52,1001,52,-5,52,3,53,1,52,56,54,1007,54,5,55,1005,55,26,1001,54,-5,54,1105,1,12,1,53,54,53,1008,54,0,55,1001,55,1,55,2,53,55,53,4,53,1001,56,-1,56,1005,56,6,99,0,0,0,0,10]
     #comp = [3,26,1001,26,-4,26,3,27,1002,27,2,27,1,27,26,27,4,27,1001,28,-1,28,1005,28,6,99,0,0,5]
-    ph = [9,7,8,5,6]
+    phases = [7,9,8,5,6]
     _mx = 0
 
     #for ph in permutations(ph):
@@ -168,24 +168,28 @@ def day7():
     names = 'ABCDE'
 
     
-    # initialize machines:
-    amplifiers = [IntCoder(comp, [p], name ) for p,name in zip(ph,names)]
-    assert len(amplifiers) == 5
-
-    _input = 0 
-    E_output = 0
-
-    while not any(a.halted for a in amplifiers):
     
-        for m in amplifiers:
-            m.add_input(_input)
-            m.produce_output()
-            if not m.halted:
-                _input = m.popout()
-                if m.name == 'E':
-                    E_output = _input
+    for ph in permutations(phases):
 
-    _mx = max(_mx, E_output)    
+        # initialize machines:
+        amplifiers = [IntCoder(comp, [p], name ) for p,name in zip(ph,names)]
+        assert len(amplifiers) == 5
+
+
+        _input = 0 
+        E_output = 0
+
+        while not any(a.halted for a in amplifiers):
+        
+            for m in amplifiers:
+                m.add_input(_input)
+                m.produce_output()
+                if not m.halted:
+                    _input = m.popout()
+                    if m.name == 'E':
+                        E_output = _input
+
+        _mx = max(_mx, E_output)    
         
     print(_mx)
 
