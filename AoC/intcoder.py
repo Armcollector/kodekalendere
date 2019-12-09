@@ -12,7 +12,8 @@ class IntCoder:
                     5: self.jump_if_true,
                     6: self.jump_if_false,
                     7: self.less_than,
-                    8: self.equals
+                    8: self.equals,
+                    9: self.adjust_relative
                     }
         self.inputs = deque(inputs)
         self.outputs = []
@@ -36,6 +37,14 @@ class IntCoder:
             return p2
         else:
             return i+3
+
+    def adjust_relative(i, ps=[0,0,0]):
+        p1 = self.parameter(1,ps)
+
+        self.relative_base += p1
+
+        return self.i + 2
+
 
     def jump_if_false(self, i, ps=[0, 0, 0]):
         p1 = self.parameter(1,ps)
