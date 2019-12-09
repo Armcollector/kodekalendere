@@ -185,4 +185,4 @@ def test_relative2():
     machine = IntCoder(comp)
     
     machine.intcode()
-    assert machine.relative_base 
+    assert machine.popout()
