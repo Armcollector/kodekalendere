@@ -23,13 +23,20 @@ class IntCoder:
         self.relative_base=0
 
     def parameter(self, pnr, ps,assignment=False):
-        if ps[pnr-1] == 0:
-            return self.x[self.x[self.i + pnr]]
-        if ps[pnr-1] == 1:
-            return self.x[self.i+pnr]
-        if ps[pnr-1] == 2:
-            return self.x[self.x[self.i + pnr]+self.relative_base]
-        
+        if not assignment:        
+            if ps[pnr-1] == 0:
+                return self.x[self.x[self.i + pnr]]
+            if ps[pnr-1] == 1:
+                return self.x[self.i+pnr]
+            if ps[pnr-1] == 2:
+                return self.x[self.x[self.i + pnr]+self.relative_base]
+        else:
+            if ps[pnr-1] == 0:
+                return self.x[self.x[self.i + pnr]]
+            if ps[pnr-1] == 1:
+                return self.x[self.i+pnr]
+            if ps[pnr-1] == 2:
+                return self.x[self.x[self.i + pnr]+self.relative_base]
         raise NotImplementedError
 
     def jump_if_true(self,i, ps=[0,0,0]):
