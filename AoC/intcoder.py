@@ -185,20 +185,6 @@ def day7():
         
     print(_mx)
 
-    # active_machine = 0
-    # _input = 0
-    # while not amplifiers[active_machine].halted:
-    #     amplifiers[active_machine].inputs.append(_input)
-    #     _output = amplifiers[active_machine].produce_output()
-
-    #     if _output == None:
-    #         print(input)
-    #         break
-    #     else:
-    #         _input=_output
-    #         active_machine = (active_machine +1)%5
-
-    # print(active_machine, _input) 
 
 
 
