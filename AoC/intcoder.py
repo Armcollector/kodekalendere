@@ -24,7 +24,7 @@ class IntCoder:
         if ps[pnr-1] == 0:
             return self.x[self.x[self.i + pnr]]
         if ps[pnr-1] == 1:
-            return self.x[i+pnr]
+            return self.x[self.i+pnr]
         raise NotImplementedError
 
     def jump_if_true(self,i, ps=[0,0,0]):
