@@ -18,16 +18,15 @@ def test_day7_part1():
 
 def test_day7_part1_e1():
     comp = [3,15,3,16,1002,16,10,16,1,16,15,15,4,15,99,0,0]
-    phases =[3,1,2,4,0]
+    ph =[4,3,2,1,0]
     _mx = 0
-    for ph in permutations(phases):
-        _input = 0
-        for p,e in zip(ph,['A','B','C','D','E']):
-            A = IntCoder(comp,[p,_input])
-            A.intcode()
-            _input = A.outputs.pop()
-        _mx = max(_mx,_input)
-    
+    _input = 0
+    for p,e in zip(ph,['A','B','C','D','E']):
+        A = IntCoder(comp,[p,_input])
+        A.intcode()
+        _input = A.outputs.pop()
+    _mx = max(_mx,_input)
+
     assert _mx == 43210
 
 
