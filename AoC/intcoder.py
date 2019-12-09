@@ -209,4 +209,9 @@ def day7():
 
 
 if __name__ == '__main__':
+    
+    comp= [109,1,204,-1,1001,100,1,100,1008,100,16,101,1006,101,0,99]
+    machine = IntCoder(comp)
+    machine.intcode()
+    print(machine.outputs)
     pass
