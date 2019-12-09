@@ -97,7 +97,9 @@ class IntCoder:
         else:
             _in = self.inputs.popleft()
         print(self.name, "uses input:", _in)
-        self.x[self.x[i + 1]] = _in
+
+        if ps[0]== 0:
+            self.x[self.x[i + 1]] = _in
         return i + 2
 
     def out(self, i, ps=[0, 0, 0]):
