@@ -20,6 +20,13 @@ class IntCoder:
         self.halted = False
         self.name = name
 
+    def paramter(self, pnr, ps):
+        if ps[pnr-1] == 0:
+            return self.x[self.x[self.i + pnr]]
+        if ps[pnr-1] == 1:
+            return self.x[i+pnr]
+        raise NotImplementedError
+
     def jump_if_true(self,i, ps=[0,0,0]):
         p1 = self.x[i + 1] if ps[0] else self.x[self.x[i + 1]]
         p2 = self.x[i + 2] if ps[1] else self.x[self.x[i + 2]]
