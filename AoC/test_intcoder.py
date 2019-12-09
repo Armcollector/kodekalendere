@@ -178,3 +178,11 @@ def test_relative():
     
     machine.intcode()
     assert machine.relative_base == 2019
+
+
+def test_relative2():
+    comp= [109,18,204,-17,99]
+    machine = IntCoder(comp)
+    
+    machine.intcode()
+    #assert machine.relative_base == 2019    
