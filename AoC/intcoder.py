@@ -88,7 +88,7 @@ class IntCoder:
         return i + 2
 
     def out(self, i, ps=[0, 0, 0]):
-        p1 = self.x[i + 1] if ps[0] else self.x[self.x[i + 1]]
+        p1 = self.parameter(1,ps)
         self.outputs.append(p1)
         print(self.name, "outputs", self.outputs[-1])
         return i + 2
