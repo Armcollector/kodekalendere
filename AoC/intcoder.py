@@ -155,7 +155,7 @@ def day7():
     
     phases = [7,9,8,5,6]
     _mx = 0
-
+    _mx_ph = 0
     #for ph in permutations(ph):
     names = 'ABCDE'
 
@@ -180,10 +180,11 @@ def day7():
                     _input = m.popout()
                     if m.name == 'E':
                         E_output = _input
-
-        _mx = max(_mx, E_output)    
+        if E_output > _mx:
+            _mx = max(_mx, E_output)    
+            _mx_ph = ph
         
-    print(_mx)
+    print(_mx, ph)
 
 
 
