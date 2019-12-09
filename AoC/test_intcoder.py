@@ -185,4 +185,4 @@ def test_relative2():
     machine = IntCoder(comp)
     
     machine.intcode()
-    #assert machine.relative_base == 2019    
+    assert machine.relative_base 
