@@ -176,3 +176,5 @@ def test_relative():
     machine = IntCoder(comp)
     machine.relative_base = 2000
     
+    machine.intcode()
+    
