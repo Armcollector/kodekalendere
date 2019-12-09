@@ -14,4 +14,4 @@ assert not is_krampus(100)
 with open(r"C:\git\kodekalendere\knowit\Dag9\krampus.txt","r") as f:
     k = f.read()
     
-print(len([int(i) for i in k.splitlines() if is_krampus(int(i))]))
+print(sum([int(i) for i in k.splitlines() if is_krampus(int(i))]))
