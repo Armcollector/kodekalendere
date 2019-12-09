@@ -87,7 +87,7 @@ class IntCoder:
     def add(self, i, ps=[0, 0, 0]):
         p1 = self.parameter(1,ps)
         p2 = self.parameter(2,ps)
-        p3 = self.x[i + 3]
+        p3 = self.parameter(3,ps,True)
         self.x[p3] = p1 + p2
         return i + 4
 
