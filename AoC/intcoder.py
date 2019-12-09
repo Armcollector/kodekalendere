@@ -20,7 +20,7 @@ class IntCoder:
         self.halted = False
         self.name = name
 
-    def paramter(self, pnr, ps):
+    def parameter(self, pnr, ps):
         if ps[pnr-1] == 0:
             return self.x[self.x[self.i + pnr]]
         if ps[pnr-1] == 1:
