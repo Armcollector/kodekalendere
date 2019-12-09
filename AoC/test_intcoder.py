@@ -181,8 +181,8 @@ def test_relative():
 
 
 def test_relative2():
-    comp= [109,18,204,-17,99]
+    comp= [109,18,204,-14,99]
     machine = IntCoder(comp)
     
     machine.intcode()
-    assert machine.popout() == 18
+    assert machine.popout() == 99
