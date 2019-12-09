@@ -42,10 +42,7 @@ class IntCoder:
         p1 = self.parameter(1,ps)
         p2 = self.parameter(2,ps)
 
-        if p1 != 0:
-            return p2
-        else:
-            return i+3
+        return p2 if p1 else i+3
 
     def adjust_relative(self,i, ps=[0,0,0]):
         p1 = self.parameter(1,ps)
