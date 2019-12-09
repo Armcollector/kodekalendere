@@ -4,7 +4,7 @@ from itertools import permutations
 class IntCoder:
 
     def __init__(self, x, inputs = [], name = None):
-        self.x = x
+        self.x = x + [0]*10**6
         self.ops = {1: self.add,
                     2: self.mul,
                     3: self.inp,
