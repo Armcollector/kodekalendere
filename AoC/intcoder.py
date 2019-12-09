@@ -149,8 +149,6 @@ class IntCoder:
 
             self.i = self.ops[op](self.i,ps)
 
-        
-
     def add_input(self,_inp):
         self.inputs.append(_inp)
 
