@@ -37,8 +37,8 @@ class IntCoder:
             return i+3
 
     def jump_if_false(self, i, ps=[0, 0, 0]):
-        p1 = self.x[i + 1] if ps[0] else self.x[self.x[i + 1]]
-        p2 = self.x[i + 2] if ps[1] else self.x[self.x[i + 2]]
+        p1 = self.parameter(1,ps)
+        p2 = self.parameter(2,ps)
 
         if p1 == 0:
             return p2
