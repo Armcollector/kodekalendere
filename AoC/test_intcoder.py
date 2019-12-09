@@ -172,7 +172,7 @@ def test_big_jump():
 
 
 def test_relative():
-    comp= [109,19]
+    comp= [109,19,99]
     machine = IntCoder(comp)
     machine.relative_base = 2000
     
