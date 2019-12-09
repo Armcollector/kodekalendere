@@ -177,4 +177,4 @@ def test_relative():
     machine.relative_base = 2000
     
     machine.intcode()
-    
+    assert machine.relative_base == 2019
