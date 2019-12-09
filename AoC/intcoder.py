@@ -178,7 +178,7 @@ def day7():
 
     assert len(amplifiers) == 5
 
-    _input = 0
+    _input = 0 
 
     
     
