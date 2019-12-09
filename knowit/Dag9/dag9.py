@@ -11,7 +11,7 @@ def is_krampus(n):
 assert is_krampus(45)
 assert not is_krampus(100)
 
-with open(r"C:\git\kodekalendere\knowit\Dag8\krampus.txt","r") as f:
+with open(r"C:\git\kodekalendere\knowit\Dag9\krampus.txt","r") as f:
     k = f.read()
     
-sum([int(i) for i in k.splitlines() if is_krampus(int(i))])
+print(len([int(i) for i in k.splitlines() if is_krampus(int(i))]))
