@@ -59,6 +59,8 @@ class IntCoder:
         p1 = self.parameter(1,ps)
         p2 = self.parameter(2,ps)
 
+        return i+3 if p1 else p2
+
         if p1 == 0:
             return p2
         else:
