@@ -102,8 +102,7 @@ class IntCoder:
             _in = int(input("Enter input: "))
         else:
             _in = self.inputs.popleft()
-        print(self.name, "uses input:", _in)
-
+        
         p1 = self.parameter(1,ps,True)
         self.x[p1] = _in
         return i + 2
@@ -111,7 +110,6 @@ class IntCoder:
     def out(self, i, ps=[0, 0, 0]):
         p1 = self.parameter(1,ps)
         self.outputs.append(p1)
-        print(self.name, "outputs", self.outputs[-1])
         return i + 2
 
     def popout(self):
@@ -154,7 +152,6 @@ class IntCoder:
         print("pointer at ", self.i)
 
     def add_input(self,_inp):
-        print(self.name, "receives", _inp)
         self.inputs.append(_inp)
 
 
