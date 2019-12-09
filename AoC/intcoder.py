@@ -37,7 +37,6 @@ class IntCoder:
                 return self.x[self.i+pnr]
             if ps[pnr-1] == 2:
                 return self.x[self.i + pnr]+self.relative_base
-        raise NotImplementedError
 
     def jump_if_true(self,i, ps=[0,0,0]):
         p1 = self.parameter(1,ps)
