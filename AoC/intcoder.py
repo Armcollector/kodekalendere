@@ -170,7 +170,7 @@ def day7():
     
     
     for ph in permutations(phases):
-
+        print(ph)
         # initialize machines:
         amplifiers = [IntCoder(comp, [p], name ) for p,name in zip(ph,names)]
         assert len(amplifiers) == 5
