@@ -72,8 +72,8 @@ class IntCoder:
         return i + 4
 
     def mul(self, i, ps=[0, 0, 0]):
-        p1 = self.x[i + 1] if ps[0] else self.x[self.x[i + 1]]
-        p2 = self.x[i + 2] if ps[1] else self.x[self.x[i + 2]]
+        p1 = self.parameter(1,ps)
+        p2 = self.parameter(2,ps)
         p3 = self.x[i + 3]
         self.x[p3] = p1 * p2
         return i + 4
