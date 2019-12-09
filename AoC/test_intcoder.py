@@ -11,7 +11,7 @@ def test_day7_part1():
     for ph in permutations(phases):
         _input = 0
         for p,e in zip(ph,['A','B','C','D','E']):
-            A = IntCoder(comp,[p,_input])
+            A = IntCoder(comp,[p,_input],e)
             A.intcode()
             _input = A.outputs.pop()
         _mx = max(_mx,_input)
@@ -24,7 +24,7 @@ def test_day7_part1_e1():
     _mx = 0
     _input = 0
     for p,e in zip(ph,['A','B','C','D','E']):
-        A = IntCoder(comp,[p,_input])
+        A = IntCoder(comp,[p,_input],e)
         A.intcode()
         _input = A.outputs.pop()
     _mx = max(_mx,_input)
@@ -39,7 +39,7 @@ def test_day7_part1_e2():
     for ph in permutations(phases):
         _input = 0
         for p,e in zip(ph,['A','B','C','D','E']):
-            A = IntCoder(comp,[p,_input])
+            A = IntCoder(comp,[p,_input],e)
             A.intcode()
             _input = A.outputs.pop()
         _mx = max(_mx,_input)
@@ -54,7 +54,7 @@ def test_day7_part1_e3():
     for ph in permutations(phases):
         _input = 0
         for p,e in zip(ph,['A','B','C','D','E']):
-            A = IntCoder(comp,[p,_input])
+            A = IntCoder(comp,[p,_input],e)
             A.intcode()
             _input = A.outputs.pop()
         _mx = max(_mx,_input)
