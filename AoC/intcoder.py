@@ -184,7 +184,7 @@ def day7():
             _mx = max(_mx, E_output)    
             _mx_ph = ph
         
-    print(_mx, ph)
+    print(_mx, _mx_ph)
 
 
 
