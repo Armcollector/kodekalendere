@@ -28,7 +28,7 @@ class IntCoder:
         raise NotImplementedError
 
     def jump_if_true(self,i, ps=[0,0,0]):
-        p1 = self.x[i + 1] if ps[0] else self.x[self.x[i + 1]]
+        p1 = self.parameter(1,ps)
         p2 = self.x[i + 2] if ps[1] else self.x[self.x[i + 2]]
 
         if p1 != 0:
