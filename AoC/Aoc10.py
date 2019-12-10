@@ -81,7 +81,7 @@ def station(x):
 
     for i,r in enumerate(x.splitlines()):
         for j, a in enumerate(r):
-            if a == 'x':
+            if a == 'X':
                 return (j,i)
 
 
