@@ -77,3 +77,10 @@ def laser(x):
     return max(len(i) for i in d.values())
 
 
+def station(x):
+
+    for i,r in enumerate(x.splitlines()):
+        for j, a in enumerate(r):
+            if a == 'x':
+                return (j,i)
+
