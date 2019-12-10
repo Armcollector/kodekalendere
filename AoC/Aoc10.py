@@ -32,7 +32,6 @@ def f(x):
         d[f].add((x,y))
     
     
-    _mx = max(len(v) for v in d.values())
     _m = max((len(v),k) for k,v in d.items())
     return _m
 
