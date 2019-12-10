@@ -1,9 +1,16 @@
 from itertools import product
 from fractions import Fraction
 from math import gcd
+import math
 
+def dotproduct(v1, v2):
+  return sum((a*b) for a, b in zip(v1, v2))
 
+def length(v):
+  return math.sqrt(dotproduct(v, v))
 
+def cal_angle(v1, v2):
+  return math.acos(dotproduct(v1, v2) / (length(v1) * length(v2)))
 
 def select_asteroid(x):
 
@@ -55,7 +62,7 @@ def laser(x):
         print(f, t)
         
         x,y = diff(f, t)
-        angle = reduce(x,y)
+        angle = cal_angle((1,0),reduce(x,y))
         d[angle] = d.get(angle,[]) + [t]
     print(d)
 
