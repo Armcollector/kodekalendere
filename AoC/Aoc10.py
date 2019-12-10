@@ -17,7 +17,6 @@ def select_asteroid(x):
         if f == t:
             continue
 
-        
         g = gcd(x,y)
         x//= g
         y//= g
