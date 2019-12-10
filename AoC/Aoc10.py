@@ -1,5 +1,6 @@
 from itertools import product
 from fractions import Fraction
+from math import gcd
 
 
 def f(x):
