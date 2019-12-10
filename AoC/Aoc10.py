@@ -31,7 +31,7 @@ def f(x):
             if x > 0:
                 d[f].add((1,0))
             else:
-                d[f].add((1,-1))
+                d[f].add((-1,0))
 
     print(d[(0,0)])
     return max(len(i) for i in d.values())
