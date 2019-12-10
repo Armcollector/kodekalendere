@@ -8,7 +8,7 @@ from math import gcd
 def f(x):
 
 
-    asteroids = newmethod748(x)
+    asteroids = extract_asteroids(x)
 
     d = {}            
     for f,t in product(asteroids,repeat=2):
@@ -36,7 +36,7 @@ def f(x):
 
     return max(len(v) for v in d.values())
 
-def newmethod748(x):
+def extract_asteroids(x):
     asteroids = set({})
 
     for i,r in enumerate(x.splitlines()):
@@ -48,7 +48,7 @@ def newmethod748(x):
 
 
 def laser(x):
-    asteroids = newmethod748(x)
+    asteroids = extract_asteroids(x)
 
     d = {}            
     for f,t in product(asteroids,repeat=2):
