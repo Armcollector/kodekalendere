@@ -57,6 +57,8 @@ def laser(x):
         print(f, t)
         
         x,y = diff(f, t)
+        x,y = reduce(x,y)
+
 
 def diff(f, t):
     x = f[0]-t[0]
