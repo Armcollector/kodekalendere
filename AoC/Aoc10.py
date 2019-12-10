@@ -74,6 +74,9 @@ def laser(x):
     nr_asteroids = len(asteroids)
     for t in asteroids:
         
+        if f == t:
+            continue
+
         x,y = diff(f, t)
         #angle = adjust(angle_between((1,0),reduce(x,y)))
         angle = reduce(x,y)
