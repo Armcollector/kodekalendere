@@ -90,7 +90,7 @@ def laser(x):
         for i in sorted(d.keys(), key = lambda x: adjust(angle_between((1,0),x)) ):
             if d[i]:
                 shot +=1
-                print(d[i].pop())
+                print(shot, d[i].pop())
                 
 
     
