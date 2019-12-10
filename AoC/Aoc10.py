@@ -49,11 +49,11 @@ def extract_asteroids(x):
 
 def laser(x):
     asteroids = extract_asteroids(x)
-    stat = station(x)
+    f = station(x)
     d = {}    
-    print(stat, "roids", asteroids)        
+
     for t in asteroids:
-        pass
+        print(f, t)
         # x = f[0]-t[0]
         # y = f[1]-t[1]
 
