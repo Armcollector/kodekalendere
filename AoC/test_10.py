@@ -5,7 +5,7 @@ def test_8():
     assert select_asteroid(""".#..#\n.....\n#####\n....#\n...##""")== (8, (3,4))
 
 
-def test_laser():
+def t_laser():
 
     res = laser(""".###.#...#.#.##.#.####..
 .#....#####...#.######..
