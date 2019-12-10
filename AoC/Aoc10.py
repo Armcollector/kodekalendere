@@ -72,7 +72,8 @@ def laser(x):
     for t in asteroids:
         
         x,y = diff(f, t)
-        angle = adjust(angle_between((1,0),reduce(x,y)))
+        #angle = adjust(angle_between((1,0),reduce(x,y)))
+        angle = reduce(x,y)
         d[angle] = d.get(angle,[]) + [t]
     for i in sorted(d.keys()):
         print(d[i][0])
