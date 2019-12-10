@@ -32,9 +32,9 @@ def f(x):
         d[f].add((x,y))
     
     
+    _mx = max(len(v) for v in d.values())
 
-
-    return max(len(v) for v in d.values())
+    return _mx
 
 def extract_asteroids(x):
     asteroids = set({})
