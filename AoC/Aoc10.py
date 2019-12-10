@@ -3,6 +3,8 @@ from fractions import Fraction
 from math import gcd
 
 
+
+
 def f(x):
 
 
