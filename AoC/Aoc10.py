@@ -38,7 +38,7 @@ def f(x):
     
     
 
-    print(d)
+    print([ (k,len(v)) for k,v in d.items() ])
 
     return max(len(i) for i in d.values())
 
