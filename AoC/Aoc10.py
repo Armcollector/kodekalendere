@@ -13,7 +13,7 @@ def f(x):
             if a != '.':
                 asteroids.add((j,i))
 
-    #asteroids = { ( int((x+0.5)*2), int((y+0.5)*2)) for x,y in asteroids } 
+    asteroids = { ( int((x+0.5)*2), int((y+0.5)*2)) for x,y in asteroids } 
     
     d = {}            
     for f,t in product(asteroids,repeat=2):
@@ -35,7 +35,7 @@ def f(x):
             d[f] = set([])
 
         d[f].add((x,y))
-   
+    
     return max(len(i) for i in d.values())
 
 
