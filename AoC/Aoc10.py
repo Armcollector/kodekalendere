@@ -72,7 +72,7 @@ def laser(x):
     for t in asteroids:
         
         x,y = diff(f, t)
-        angle = angle_between((1,0),reduce(x,y))
+        angle = adjust(angle_between((1,0),reduce(x,y)))
         d[angle] = d.get(angle,[]) + [t]
     for i in sorted(d.keys()):
         print(d[i][0])
@@ -83,7 +83,11 @@ def diff(f, t):
     y = f[1]-t[1]
     return x,y 
         
-    
+def adjust(a):
+    a += math.pi/4
+    if a > 2*math.pi:
+        a-= 2*math.pi
+    return a
 
 
     
