@@ -19,8 +19,6 @@ def select_asteroid(x):
 
         x, y = reduce(x, y)
 
-
-
         if f not in d:
             d[f] = set([])
 
