@@ -82,7 +82,7 @@ def laser(x):
     #sort_asteroids_by_distance
 
     for k,v in d.items():
-        d[k] = list(sorted(v, key = lambda x: distance(f, x)  ,reverse=True))
+        d[k] = list(sorted(v, key = lambda x: distance(f, x)  ,reverse=False))
     
     for i in sorted(d.keys(), key = lambda x: adjust(angle_between((1,0),x)) ):
         print(i, d[i])
