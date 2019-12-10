@@ -36,6 +36,9 @@ def f(x):
 
         d[f].add((x,y))
     
+    if (5,8) in f:
+        print(d[(5,8)])
+
     return max(len(i) for i in d.values())
 
 
