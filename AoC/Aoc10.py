@@ -84,9 +84,9 @@ def diff(f, t):
     return x,y 
         
 def adjust(a):
-    a += math.pi/4
-    if a > 2*math.pi:
-        a-= 2*math.pi
+    a -= math.pi/4
+    if a  < 0:
+        a+= 2*math.pi
     return a
 
 
