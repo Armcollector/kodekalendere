@@ -41,7 +41,7 @@ def extract_asteroids(x):
 
     for i,r in enumerate(x.splitlines()):
         for j, a in enumerate(r):
-            if a != '.':
+            if a == '#':
                 asteroids.add((j,i))
     return asteroids
 
