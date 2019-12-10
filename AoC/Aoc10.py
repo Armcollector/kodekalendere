@@ -48,7 +48,8 @@ def extract_asteroids(x):
 
 def laser(x):
     asteroids = extract_asteroids(x)
-    f = select_asteroid(x)[1]
+    #f = select_asteroid(x)[1]
+    f = (8,3)
     d = {}    
 
     for t in asteroids:
