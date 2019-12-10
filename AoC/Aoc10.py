@@ -32,7 +32,7 @@ def f(x):
             else:
                 d[f].add((1,-1))
 
-    print(d[(1,1)])
+    print(d[(0,0)])
     return max(len(i) for i in d.values())
 
 
