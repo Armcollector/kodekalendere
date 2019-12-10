@@ -8,12 +8,7 @@ from math import gcd
 def f(x):
 
 
-    asteroids = set({})
-
-    for i,r in enumerate(x.splitlines()):
-        for j, a in enumerate(r):
-            if a != '.':
-                asteroids.add((j,i))
+    asteroids = newmethod748(x)
 
     d = {}            
     for f,t in product(asteroids,repeat=2):
@@ -41,15 +36,19 @@ def f(x):
 
     return max(len(v) for v in d.values())
 
-
-
-def laser(x):
+def newmethod748(x):
     asteroids = set({})
 
     for i,r in enumerate(x.splitlines()):
         for j, a in enumerate(r):
             if a != '.':
                 asteroids.add((j,i))
+    return asteroids
+
+
+
+def laser(x):
+    asteroids = newmethod748(x)
 
     d = {}            
     for f,t in product(asteroids,repeat=2):
