@@ -62,19 +62,28 @@ def extract_asteroids(x):
     return asteroids
 
 
+def distance(f,t):
+    x,y = diff(f,t)
+    return x**2+ y**2
 
 def laser(x):
     asteroids = extract_asteroids(x)
     #f = select_asteroid(x)[1]
     f = (8,3)
     d = {}    
-
+    nr_asteroids = len(asteroids)
     for t in asteroids:
         
         x,y = diff(f, t)
         #angle = adjust(angle_between((1,0),reduce(x,y)))
         angle = reduce(x,y)
         d[angle] = d.get(angle,[]) + [t]
+    
+    #sort_asteroids_by_distance
+
+    for k,v in d.items():
+        d[k] = reversed(sorted(v, key = lambda x: distance(f, x)  ))
+    
     for i in sorted(d.keys(), key = lambda x: adjust(angle_between((1,0),x)) ):
         print(i, d[i])
 
