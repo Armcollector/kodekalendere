@@ -23,6 +23,14 @@ def f(x):
         if f == t:
             continue
 
+        if gcd(x,y) == 0:
+            print(f,t)
+
+#        x//= gcd(x,y)
+#        y//= gcd(x,y)
+
+
+
         if f not in d:
             d[f] = set([])
 
