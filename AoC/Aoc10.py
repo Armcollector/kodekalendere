@@ -34,7 +34,7 @@ def f(x):
     
     _mx = max(len(v) for v in d.values())
     _m = max((len(v),k) for k,v in d.items())
-    return _mx
+    return _m[0]
 
 def extract_asteroids(x):
     asteroids = set({})
