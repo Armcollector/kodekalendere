@@ -68,17 +68,16 @@ def distance(f,t):
 
 def laser(x):
     asteroids = extract_asteroids(x)
-    #f = select_asteroid(x)[1]
-    f = (8,3)
+    f = select_asteroid(x)[1]
+    #f = (8,3)
     d = {}    
-    nr_asteroids = len(asteroids)
+    nr_asteroids = len(asteroids)-1
     for t in asteroids:
         
         if f == t:
             continue
 
         x,y = diff(f, t)
-        #angle = adjust(angle_between((1,0),reduce(x,y)))
         angle = reduce(x,y)
         d[angle] = d.get(angle,[]) + [t]
     
@@ -87,13 +86,14 @@ def laser(x):
     for k,v in d.items():
         d[k] = list(sorted(v, key = lambda x: distance(f, x)  ,reverse=True))
     
+
     shot = 0
     while shot < nr_asteroids:
 
         for i in sorted(d.keys(), key = lambda x: adjust(angle_between((1,0),x)) ):
             if d[i]:
                 shot +=1
-                print(shot, d[i].pop())
+                print(shot, i,  d[i].pop())
                 
 
     
@@ -115,10 +115,25 @@ def adjust(a):
 
 
 
-x = """.#....#####...#..
-##...##.#####..##
-##...#...#.#####.
-..#.....X...###..
-..#.#.....#....##"""
+x = """.#..##.###...#######
+##.############..##.
+.#.######.########.#
+.###.#######.####.#.
+#####.##.#.##.###.##
+..#####..#.#########
+####################
+#.####....###.#.#.##
+##.#################
+#####.##.###..####..
+..######..##.#######
+####.##.####...##..#
+.#####..#.######.###
+##...#.##########...
+#.##########.#######
+.####.#.###.###.#.##
+....##.##.###..#####
+.#.#.###########.###
+#.#.#.#####.####.###
+###.##.####.##.#..##"""
 
 laser(x)
