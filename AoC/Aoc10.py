@@ -57,6 +57,8 @@ def laser(x):
         x,y = diff(f, t)
         angle = reduce(x,y)
         d[angle] = d.get(angle,[])
+    print(d)
+    
 
 def diff(f, t):
     x = f[0]-t[0]
