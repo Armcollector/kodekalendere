@@ -70,7 +70,6 @@ def laser(x):
     d = {}    
 
     for t in asteroids:
-        print(f, t)
         
         x,y = diff(f, t)
         angle = angle_between((1,0),reduce(x,y))
