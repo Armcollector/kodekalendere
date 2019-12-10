@@ -84,10 +84,13 @@ def laser(x):
     for k,v in d.items():
         d[k] = list(sorted(v, key = lambda x: distance(f, x)  ,reverse=True))
     
-    for i in sorted(d.keys(), key = lambda x: adjust(angle_between((1,0),x)) ):
-        print(i, d[i])
+    while nr_asteroids > 0:
 
-
+        for i in sorted(d.keys(), key = lambda x: adjust(angle_between((1,0),x)) ):
+            if d[i]:
+                print(d[i].pop())
+                nr_asteroids -=1
+    
 
 def diff(f, t):
     x = f[0]-t[0]
