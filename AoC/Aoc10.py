@@ -26,22 +26,15 @@ def f(x):
         if gcd(x,y) == 0:
             print(f,t)
 
-#        x//= gcd(x,y)
-#        y//= gcd(x,y)
+        x//= gcd(x,y)
+        y//= gcd(x,y)
 
 
 
         if f not in d:
             d[f] = set([])
 
-        if y != 0:
-            d[f].add(Fraction(x,y))
-        else:
-            if x > 0:
-                d[f].add((1,0))
-            else:
-                d[f].add((-1,0))
-
+        d[f].add((x,y))
    
     return max(len(i) for i in d.values())
 
