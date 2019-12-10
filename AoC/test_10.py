@@ -2,7 +2,7 @@ from .Aoc10 import f,laser
 
 def test_8():
 
-    assert f(""".#..#\n.....\n#####\n....#\n...##""")== 8
+    assert f(""".#..#\n.....\n#####\n....#\n...##""")== (8, (3,4))
 
 
 def test_laser():
@@ -42,4 +42,3 @@ def test_station():
 
     assert station(x) == (8,3)
 
-    
