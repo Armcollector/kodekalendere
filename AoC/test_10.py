@@ -1,8 +1,8 @@
-from .Aoc10 import f,laser
+from .Aoc10 import select_asteroid,laser
 
 def test_8():
 
-    assert f(""".#..#\n.....\n#####\n....#\n...##""")== (8, (3,4))
+    assert select_asteroid(""".#..#\n.....\n#####\n....#\n...##""")== (8, (3,4))
 
 
 def test_laser():

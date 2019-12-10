@@ -5,7 +5,7 @@ from math import gcd
 
 
 
-def f(x):
+def select_asteroid(x):
 
 
     asteroids = extract_asteroids(x)
