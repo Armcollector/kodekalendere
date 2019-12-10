@@ -25,9 +25,9 @@ def f(x):
 
         if gcd(x,y) == 0:
             print(f,t)
-
-        x//= gcd(x,y)
-        y//= gcd(x,y)
+        g = gcd(x,y)
+        x//= g
+        y//= g
 
 
 
@@ -37,8 +37,7 @@ def f(x):
         d[f].add((x,y))
     
     
-
-    print([ (k,len(v)) for k,v in d.items() ])
+    
 
     return max(len(i) for i in d.values())
 
