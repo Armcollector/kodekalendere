@@ -75,7 +75,8 @@ def laser(x):
         x,y = diff(f, t)
         angle = angle_between((1,0),reduce(x,y))
         d[angle] = d.get(angle,[]) + [t]
-    print(sorted(d.keys()))
+    for i in sorted(d.keys()):
+        print(i)
 
 
 def diff(f, t):
