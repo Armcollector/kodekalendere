@@ -76,7 +76,8 @@ def laser(x):
         angle = reduce(x,y)
         d[angle] = d.get(angle,[]) + [t]
     for i in sorted(d.keys(), key = lambda x: adjust(angle_between((1,0),x)) ):
-        print(d[i][0])
+        print(d[i])
+        
 
 
 def diff(f, t):
