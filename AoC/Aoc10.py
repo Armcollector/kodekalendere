@@ -17,9 +17,7 @@ def select_asteroid(x):
         if f == t:
             continue
 
-        g = gcd(x,y)
-        x//= g
-        y//= g
+        x, y = newmethod324(x, y)
 
 
 
@@ -31,6 +29,12 @@ def select_asteroid(x):
     
     _m = max((len(v),k) for k,v in d.items())
     return _m
+
+def newmethod324(x, y):
+    g = gcd(x,y)
+    x//= g
+    y//= g
+    return x, y
 
 def extract_asteroids(x):
     asteroids = set({})
