@@ -54,8 +54,9 @@ def laser(x):
 
     for t in asteroids:
         print(f, t)
-        # x = f[0]-t[0]
-        # y = f[1]-t[1]
+        
+        x = f[0]-t[0]
+        y = f[1]-t[1]
 
         # if f == t:
         #     continue
