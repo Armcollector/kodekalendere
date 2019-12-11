@@ -27,4 +27,4 @@ def test_move_forward():
      r.turn(1)
      r.move_forward()
      
-     #assert r.position == (0,1)
+     assert r.position == (0,1)
