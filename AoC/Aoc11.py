@@ -76,3 +76,6 @@ if __name__ == '__main__':
 
     print(len(rob.log))
     print(rob.log)
+
+    print(min(x for x,y in rob.log))
+    print(min(y for x,y in rob.log))
