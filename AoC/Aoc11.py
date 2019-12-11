@@ -64,3 +64,5 @@ if __name__ == '__main__':
 
     while not rob.program.halted:
         rob.step()
+
+    print(len(rob.log))
