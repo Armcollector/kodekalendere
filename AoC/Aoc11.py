@@ -9,7 +9,7 @@ class Robot:
         self.position = (0,0)
         self.program = IntCoder(x)
         self.log = set({})
-        self.panels = {(0,0):1}
+        self.panels = {(0,0):0}
 
     def turn(self, c):
         if c == 1:
