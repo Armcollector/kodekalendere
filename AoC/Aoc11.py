@@ -48,6 +48,11 @@ class Robot:
         self.paint_floor()
         
         self.program.produce_output()
+
+
+        if self.program.halted:
+            return
+
         turn_dir = self.program.popout()
         self.turn(turn_dir)
         self.move_forward()
