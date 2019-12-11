@@ -1,4 +1,4 @@
-from .intcoder import IntCoder
+from AoC.intcoder import IntCoder
 from itertools import permutations
 import pytest
 

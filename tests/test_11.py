@@ -1,3 +1,5 @@
+from AoC.Aoc11 import Robot
+
 
 def test11():
     pass

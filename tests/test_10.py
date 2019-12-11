@@ -1,4 +1,4 @@
-from .Aoc10 import select_asteroid,laser
+from AoC.Aoc10 import select_asteroid,laser
 
 def test_8():
 
