@@ -94,4 +94,4 @@ if __name__ == '__main__':
     from PIL import Image
 
 
-    Image.fromarray(a).show()
+    Image.fromarray(a.transpose()).show()
