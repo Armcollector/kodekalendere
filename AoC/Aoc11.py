@@ -77,5 +77,12 @@ if __name__ == '__main__':
     print(len(rob.log))
     print(rob.log)
 
-    print(min(x for x,y in rob.log))
-    print(min(y for x,y in rob.log))
+    dx = min(x for x,y in rob.log)
+    dy = min(y for x,y in rob.log)
+
+    log = [(x+dx,y+dy) for x,y in rob.log]
+
+    x = max(x for x,y in rob.log)
+    y = max(y for x,y in rob.log)
+
+    import numpy as np
