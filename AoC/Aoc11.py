@@ -8,6 +8,8 @@ class Robot:
         self.direction = deque([(0,1),(1,0),(0,-1),(-1,0)])
         self.position = (0,0)
         self.program = IntCoder(x)
+        self.log = {}
+
 
     def turn(self, c):
         if c == 1:
