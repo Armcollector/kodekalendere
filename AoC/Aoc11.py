@@ -80,7 +80,7 @@ if __name__ == '__main__':
     dx = min(x for x,y in rob.log)
     dy = min(y for x,y in rob.log)
 
-    log = [(x+dx,y+dy) for x,y in rob.log]
+    log = [(x - dx,y - dy) for x,y in rob.log]
 
     x = max(x for x,y in log)
     y = max(y for x,y in log)
