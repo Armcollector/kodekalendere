@@ -86,3 +86,5 @@ if __name__ == '__main__':
     y = max(y for x,y in rob.log)
 
     import numpy as np
+
+    print(x,y)
