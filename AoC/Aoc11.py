@@ -82,8 +82,8 @@ if __name__ == '__main__':
 
     log = [(x+dx,y+dy) for x,y in rob.log]
 
-    x = max(x for x,y in rob.log)
-    y = max(y for x,y in rob.log)
+    x = max(x for x,y in log)
+    y = max(y for x,y in log)
 
     import numpy as np
 
