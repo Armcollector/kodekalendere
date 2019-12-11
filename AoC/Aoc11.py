@@ -3,7 +3,7 @@ from collections import deque
 
 class robot:
 
-    def __init__(x):
+    def __init__(self,x):
         self.direction = [(0,1),(1,0),(0,-1),(-1,0)]
         self.position = (0,0)
         self.program = IntCoder(x)
