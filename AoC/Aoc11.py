@@ -74,17 +74,19 @@ if __name__ == '__main__':
     while not rob.program.halted:
         rob.step()
 
-    print(len(rob.log))
-    print(rob.log)
+    
+    dx = min(x for (x,y), c in rob.panels if c )
+    dy = min(y for (x,y), c in rob.panels if c)
 
-    dx = min(x for x,y in rob.log)
-    dy = min(y for x,y in rob.log)
-
-    log = [(x - dx,y - dy) for x,y in rob.log]
+    log = [(x - dx,y - dy) for (x,y), c in rob.panels if c]
 
     x = max(x for x,y in log)
     y = max(y for x,y in log)
 
     import numpy as np
 
-    print(x,y)
+    a = np.zeros((x+1,y+1))
+    for x,y in log:
+        a[x,y] = 1
+    
+    print(a)
