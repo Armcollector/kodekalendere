@@ -34,7 +34,7 @@ class Robot:
 
     def paint_floor(self):
 
-        self.program.add_input(floor())
+        self.program.add_input(self.floor())
         self.program.produce_output()
         color = self.program.popout()
 
