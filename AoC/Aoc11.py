@@ -40,6 +40,8 @@ class Robot:
 
         self.panels[self.position] = color
         self.log.add(self.position)
+        print("painted ", self.position, "to", color)
+
 
     def step(self):
         
