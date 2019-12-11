@@ -32,10 +32,15 @@ class Robot:
         else:
             return 0
 
-    def step(self):
-        # read floor
-        c = floor()
+    def paint_floor(self):
 
+        self.panels[self.position] = floor()
+        self.log.add(self.position)
+
+    def step(self):
+        
+        self.paint_floor()
+        
         pass
 
 
