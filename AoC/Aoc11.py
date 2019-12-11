@@ -36,6 +36,10 @@ class Robot:
 
         self.program.add_input(self.floor())
         self.program.produce_output()
+
+        if self.program.halted:
+            return
+
         color = self.program.popout()
 
         self.panels[self.position] = color
