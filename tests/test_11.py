@@ -15,3 +15,10 @@ def test_rotate():
 
     r.turn(0)
     assert r.facing() == (0,1)
+
+def test_move_forward():
+     r = Robot([])
+
+     r.move_forward()
+
+     #assert r.position == 
