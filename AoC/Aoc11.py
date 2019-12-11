@@ -26,7 +26,16 @@ class Robot:
 
         self.position = (x + dx, y +dy)
 
+    def floor(self):
+        if self.position in self.panels:
+            return self.panels[self.position]
+        else:
+            return 0
+
     def step(self):
+        # read floor
+        c = floor()
+
         pass
 
 
