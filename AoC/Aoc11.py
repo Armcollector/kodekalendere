@@ -1,4 +1,4 @@
-from intcoder import IntCoder
+from AoC.intcoder import IntCoder
 from collections import deque
 
 class robot:
