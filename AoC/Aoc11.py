@@ -13,9 +13,9 @@ class Robot:
 
     def turn(self, c):
         if c == 1:
-            self.direction.rotate(-1)
-        else:
             self.direction.rotate(1)
+        else:
+            self.direction.rotate(-1)
 
     def facing(self):
         return self.direction[0]
