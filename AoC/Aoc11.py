@@ -15,6 +15,8 @@ class Robot:
         else:
             self.direction.rotate(-1)
 
+    def facing(self):
+        return self.direction[0]
 
 d = {}
 
