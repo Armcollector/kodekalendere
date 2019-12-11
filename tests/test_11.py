@@ -20,5 +20,5 @@ def test_move_forward():
      r = Robot([])
 
      r.move_forward()
-
-     assert r.position == (0,1)
+     r.move_forward()
+     assert r.position == (0,2)
