@@ -40,7 +40,7 @@ class Robot:
 
         self.panels[self.position] = color
         self.log.add(self.position)
-        print("painted ", self.position, "to", color)
+        #print("painted ", self.position, "to", color)
 
 
     def step(self):
@@ -51,7 +51,7 @@ class Robot:
         turn_dir = self.program.popout()
         self.turn(turn_dir)
         self.move_forward()
-        print("moved to", self.position)
+        #print("moved to", self.position)
         
 
 
