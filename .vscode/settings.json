@@ -5,7 +5,7 @@
             {
                 "match": ".*",
                 "isAsync": true,
-                "cmd": "$env:PYTHONPATH='C:\\git\\kodekalendere' && pytest && git commit -am 'TCRWorking' || git reset --hard"
+                "cmd": "Set-Item ENV:PYTHONPATH='C:\\git\\kodekalendere' && pytest && git commit -am 'TCRWorking' || git reset --hard"
             }
         ]
     },
