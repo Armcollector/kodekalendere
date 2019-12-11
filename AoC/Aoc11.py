@@ -49,7 +49,7 @@ class Robot:
         turn_dir = self.program.popout()
         self.turn(turn_dir)
         self.move_forward()
-        print("moved to", self.move_forward)
+        print("moved to", self.position)
         
 
 
