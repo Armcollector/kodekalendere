@@ -8,7 +8,7 @@ class Robot:
         self.direction = deque([(0,1),(1,0),(0,-1),(-1,0)])
         self.position = (0,0)
         self.program = IntCoder(x)
-        self.log = {}
+        self.log = set({})
         self.panels = {}
 
     def turn(self, c):
