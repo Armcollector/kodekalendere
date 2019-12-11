@@ -6,3 +6,7 @@ def test11():
 
 def test_rotate():
     r = Robot([])
+
+    assert r.facing() == (0,1)
+
+    
