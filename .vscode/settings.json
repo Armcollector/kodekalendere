@@ -10,7 +10,7 @@
         ]
     },
     "python.testing.pytestArgs": [
-        "AoC"
+        "pytest"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
