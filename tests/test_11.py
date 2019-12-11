@@ -12,3 +12,6 @@ def test_rotate():
     r.turn(1)
 
     assert r.facing() == (1,0)
+
+    r.turn(0)
+    assert r.facing() == (0,1)
