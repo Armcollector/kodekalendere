@@ -75,10 +75,10 @@ if __name__ == '__main__':
         rob.step()
 
     
-    dx = min(x for (x,y), c in rob.panels if c )
-    dy = min(y for (x,y), c in rob.panels if c)
+    dx = min(x for (x,y), c in rob.panels.items() if c )
+    dy = min(y for (x,y), c in rob.panels.items() if c)
 
-    log = [(x - dx,y - dy) for (x,y), c in rob.panels if c]
+    log = [(x - dx,y - dy) for (x,y), c in rob.panels.items() if c]
 
     x = max(x for x,y in log)
     y = max(y for x,y in log)
