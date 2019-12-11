@@ -21,4 +21,4 @@ def test_move_forward():
 
      r.move_forward()
 
-     #assert r.position == 
+     assert r.position == (0,1)
