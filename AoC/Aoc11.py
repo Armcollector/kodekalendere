@@ -87,6 +87,11 @@ if __name__ == '__main__':
 
     a = np.zeros((x+1,y+1))
     for x,y in log:
-        a[x,y] = 1
+        a[x,y] = 255
     
     print(a)
+
+    from PIL import Image
+
+
+    Image.fromarray(a).show()
