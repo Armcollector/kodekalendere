@@ -9,7 +9,7 @@ class Robot:
         self.position = (0,0)
         self.program = IntCoder(x)
         self.log = {}
-
+        self.panels = {}
 
     def turn(self, c):
         if c == 1:
@@ -25,6 +25,9 @@ class Robot:
         dx,dy = self.facing()
 
         self.position = (x + dx, y +dy)
+
+    def step(self):
+        pass
 
 
 d = {}
