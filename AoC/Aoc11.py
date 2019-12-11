@@ -75,3 +75,4 @@ if __name__ == '__main__':
         rob.step()
 
     print(len(rob.log))
+    print(rob.log)
