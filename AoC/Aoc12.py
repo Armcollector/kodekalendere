@@ -23,6 +23,10 @@ class Planet:
     def apply_velocity(self):
         self.position = [p + v for p,v in zip(self.position, self.velocity)]
 
+    def __repr__(self):
+        return f"pos={self.position}, vel={self.velocity}"
+
+
 class System:
 
     def __init__(self,_input):
@@ -53,7 +57,7 @@ class System:
         self.step +=1
 
     def __repr__(self):
-        s = ""
+        s = f"After {self.steps}:\n"
         for i in self.planets:
             s += str(i) +"\n"
         return s
