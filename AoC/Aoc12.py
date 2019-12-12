@@ -1,3 +1,5 @@
+import re
+
 class Planet:
     
     def __init__(self):
