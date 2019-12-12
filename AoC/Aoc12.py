@@ -69,7 +69,7 @@ if __name__ == '__main__':
 <x=-9, y=0, z=-4>
 <x=4, y=6, z=0>""")
 
-    for i in range(1000):
+    for i in range(2722):
         s.step()
 
     print(s)
