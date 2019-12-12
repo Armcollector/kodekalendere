@@ -25,3 +25,6 @@ def test_system():
 
     assert len(p.planets) == 4
     assert all(isinstance(i, Planet) for i in p.planets)
+
+def test_apply_gravity():
+    pass
