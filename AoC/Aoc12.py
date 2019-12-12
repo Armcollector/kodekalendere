@@ -54,7 +54,7 @@ class System:
     def step(self):
         self.apply_gravity()
         self.apply_velocity()
-        self.step +=1
+        self.steps +=1
 
     def __repr__(self):
         s = f"After {self.steps}:\n"
