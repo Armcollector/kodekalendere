@@ -7,10 +7,11 @@ class Planet:
         self.velocity = None
 
 
+
+
 def parse_input(x):
 
-    for i in x.splitlines():
-        return [int(i) for i in re.findall('(-*[0-9]+)',x)]
+    return [ [int(i) for i in re.findall('(-*[0-9]+)',l)] for l in x.splitlines() ]
 
 if __name__ == '__main__':
     pass
