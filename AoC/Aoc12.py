@@ -28,6 +28,9 @@ class Planet:
     def __repr__(self):
         return f"pos={self.position}, vel={self.velocity}"
 
+    def log_planet(self):
+        self.logp.append(self.position)
+        self.logv.append(self.velocity)
 
 class System:
 
