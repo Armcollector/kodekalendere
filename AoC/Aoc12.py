@@ -109,7 +109,7 @@ if __name__ == '__main__':
 
     
 
-    for i in range(50000):
+    for i in range(100000):
         s.step()
     c = []
     for i in s.planets:
