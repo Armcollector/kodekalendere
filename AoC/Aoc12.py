@@ -12,7 +12,7 @@ class System:
         self.planets = self.create_planets(_input)
 
     def create_planets(self, _input):
-        pass
+        return [Planet(i) for i in self.parse_input(_input)]
 
     def parse_input(self,x):
 
