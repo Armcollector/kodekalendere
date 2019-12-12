@@ -32,4 +32,4 @@ def test_apply_gravity():
     
     p1.apply_gravity(p2) 
 
-    assert p1.velocity[0]
+    assert p1.velocity[0] == 1
