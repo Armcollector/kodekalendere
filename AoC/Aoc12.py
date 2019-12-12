@@ -49,6 +49,9 @@ class System:
     def step(self):
         self.apply_gravity()
         self.apply_velocity()
+
+    def __repr__(self):
+        print("hello jupyter")
     
 if __name__ == '__main__':
 
