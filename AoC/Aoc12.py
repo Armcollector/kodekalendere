@@ -109,7 +109,11 @@ if __name__ == '__main__':
         c+= i.find_periods()
 
     
-    print("cycle", c)
+    import sympy
+
+    
+
+    print("cycle", sympy.lcm(c))
         
     print(s)
     print(s.total_energy())
