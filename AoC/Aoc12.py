@@ -4,7 +4,7 @@ class Planet:
     
     def __init__(self):
         self.position = None
-        self.velocity = None
+        self.velocity = [0,0,0]
 
 class System:
 
