@@ -11,6 +11,8 @@ class System:
     def __init__(self,_input):
         self.planets = None
 
+    def create_planets(_input):
+        pass
 
 def parse_input(x):
 
