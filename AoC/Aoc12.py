@@ -12,7 +12,7 @@ def parse_input(x):
 
 if __name__ == '__main__':
     pass
-
+    re.match('(-*[0-9]*)',"<x=-7, y=17, z=-11>")
 """
     <x=-7, y=17, z=-11>
     <x=9, y=12, z=5>
