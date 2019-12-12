@@ -110,17 +110,20 @@ if __name__ == '__main__':
     
 
     for i in range(2500000):
+        if i%10000:
+            c = []
+            for i in s.planets:
+                c+= i.find_periods()
+            print("cycle", sympy.lcm(c))
+    
         s.step()
-    c = []
-    for i in s.planets:
-        c+= i.find_periods()
+   
 
     
     import sympy
 
     
 
-    print("cycle", sympy.lcm(c))
         
     print(s)
     print(s.total_energy())
