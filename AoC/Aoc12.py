@@ -78,10 +78,12 @@ if __name__ == '__main__':
 <x=4, y=-8, z=8>
 <x=3, y=5, z=-1>""")
 
+    t = []
     for i in range(200):
         s.step()
-        print(s.planets[0].position[1])
-
+        t.append(s.planets[0].position[1])
+        
+    print(t)
     print(s)
     print(s.total_energy())
     print(time()-start)
