@@ -90,13 +90,6 @@ if __name__ == '__main__':
 
     from time import time
 
-    s = System("""<x=-7, y=17, z=-11>
-<x=9, y=12, z=5>
-<x=-9, y=0, z=-4>
-<x=4, y=6, z=0>""")
-
-    start = time()
-
     s = System("""<x=-1, y=0, z=2>
 <x=2, y=-10, z=-7>
 <x=4, y=-8, z=8>
@@ -106,6 +99,15 @@ if __name__ == '__main__':
 <x=5, y=5, z=10>
 <x=2, y=-7, z=3>
 <x=9, y=-8, z=-3>""")
+
+    s = System("""<x=-7, y=17, z=-11>
+<x=9, y=12, z=5>
+<x=-9, y=0, z=-4>
+<x=4, y=6, z=0>""")
+
+    start = time()
+
+    
 
     for i in range(10000):
         s.step()
