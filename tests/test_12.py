@@ -22,3 +22,5 @@ def test_system():
 <x=9, y=12, z=5>
 <x=-9, y=0, z=-4>
 <x=4, y=6, z=0>""")
+
+    assert len(p.planets) == 4
