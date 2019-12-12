@@ -109,7 +109,7 @@ if __name__ == '__main__':
 
     import sympy
 
-    for i in range(2500000):
+    for i in range(1,2500000):
         if i%10000 == 0:
             c = []
             for i in s.planets:
