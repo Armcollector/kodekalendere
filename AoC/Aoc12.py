@@ -6,6 +6,10 @@ class Planet:
         self.position = position
         self.velocity = [0,0,0]
 
+    def energy():
+        return sum(abs(i) for i in self.position) * sum(abs(i) for i in self.velocity)
+
+
 class System:
 
     def __init__(self,_input):
