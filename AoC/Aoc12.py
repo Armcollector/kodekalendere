@@ -3,7 +3,7 @@ import re
 class Planet:
     
     def __init__(self, position = [0,0,0]):
-        self.position = None
+        self.position = position
         self.velocity = [0,0,0]
 
 class System:
