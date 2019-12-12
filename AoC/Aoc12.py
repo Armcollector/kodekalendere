@@ -73,6 +73,11 @@ if __name__ == '__main__':
 
     start = time()
 
+    s = System("""<x=-1, y=0, z=2>
+<x=2, y=-10, z=-7>
+<x=4, y=-8, z=8>
+<x=3, y=5, z=-1>""")
+
     for i in range(1000):
         s.step()
 
