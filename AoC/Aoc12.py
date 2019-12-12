@@ -45,8 +45,11 @@ class System:
     def apply_velocity(self):
         for m in self.planets:
             m.apply_velocity()
-                    
-
+    
+    def step(self):
+        self.apply_gravity()
+        self.apply_velocity
+    
 if __name__ == '__main__':
     pass
     x = re.match('(-*[0-9]*)',"<x=-7, y=17, z=-11>").groups()
