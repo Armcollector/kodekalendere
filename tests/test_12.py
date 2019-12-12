@@ -16,4 +16,4 @@ def test_parse():
 
 def test_system():
     from AoC.Aoc12 import System
-    p = System()
+    p = System("x")

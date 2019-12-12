@@ -7,7 +7,9 @@ class Planet:
         self.velocity = None
 
 class System:
-    pass
+
+    def __init__(self,_input):
+        pass
 
 
 def parse_input(x):
