@@ -27,6 +27,9 @@ def test_system():
     assert all(isinstance(i, Planet) for i in p.planets)
 
 def test_apply_gravity():
-    p1 = Planet([0,0,0])
-    p2 = Planet([0,0,0])
-    pass
+    p1 = Planet([3,0,0])
+    p2 = Planet([5,0,0])
+    
+    p1.apply_gravity(p2) 
+
+    assert p1.velocity[0]
