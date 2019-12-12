@@ -1,6 +1,9 @@
 import re
 from itertools import product
 
+def delta(n):
+    pass
+
 class Planet:
     
     def __init__(self, position ):
@@ -10,7 +13,8 @@ class Planet:
     def energy(self ):
         return sum(abs(i) for i in self.position) * sum(abs(i) for i in self.velocity)
 
-    
+    def apply_gravity(self, m2):
+        [v2 for v1,v2 in zip(self.velocity, m2.velocity)]
 
 class System:
 
