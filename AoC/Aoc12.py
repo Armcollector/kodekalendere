@@ -53,7 +53,10 @@ class System:
         self.step +=1
 
     def __repr__(self):
-        return "hello jupyter"
+        s = ""
+        for i in self.planets:
+            s += str(i)
+        return s
     
 if __name__ == '__main__':
 
