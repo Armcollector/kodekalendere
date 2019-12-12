@@ -20,6 +20,9 @@ class Planet:
     def apply_gravity(self, m2):
         self.velocity = [v1 + delta(v2-v1) for v1,v2 in zip(self.velocity, m2.velocity)]
 
+    def apply_velocity(self):
+        self.position = [p + v for p,v in zip(self.position, self.velocity)]
+
 class System:
 
     def __init__(self,_input):
