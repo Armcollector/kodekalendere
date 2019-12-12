@@ -107,7 +107,7 @@ if __name__ == '__main__':
 
     start = time()
 
-    
+    import sympy
 
     for i in range(2500000):
         if i%10000:
