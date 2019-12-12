@@ -9,7 +9,7 @@ class Planet:
 class System:
 
     def __init__(self,_input):
-        self.planets = None
+        self.planets = self.create_planets(_input)
 
     def create_planets(self, _input):
         pass
