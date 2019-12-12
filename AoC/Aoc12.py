@@ -56,7 +56,12 @@ class System:
         for m in self.planets:
             m.apply_velocity()
     
+    def log_planets():
+        for m in self.planets:
+            m.log_planet()
+
     def step(self):
+        self.log_planets()
         self.apply_gravity()
         self.apply_velocity()
         self.steps +=1
