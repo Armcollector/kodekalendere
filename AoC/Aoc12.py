@@ -64,11 +64,13 @@ class System:
     
 if __name__ == '__main__':
 
-    s = System("""<x=-1, y=0, z=2>
-<x=2, y=-10, z=-7>
-<x=4, y=-8, z=8>
-<x=3, y=5, z=-1>""")
+    s = System("""<x=-7, y=17, z=-11>
+<x=9, y=12, z=5>
+<x=-9, y=0, z=-4>
+<x=4, y=6, z=0>""")
 
-    for i in range(3):
-        print(s)
+    for i in range(1000):
         s.step()
+
+    print(s)
+    print(s.total_energy())
