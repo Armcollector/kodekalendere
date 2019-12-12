@@ -18,7 +18,7 @@ class Planet:
         return sum(abs(i) for i in self.position) * sum(abs(i) for i in self.velocity)
 
     def apply_gravity(self, m2):
-        [v2 for v1,v2 in zip(self.velocity, m2.velocity)]
+        self.velocity = [v1 + delta(v2-v1) for v1,v2 in zip(self.velocity, m2.velocity)]
 
 class System:
 
