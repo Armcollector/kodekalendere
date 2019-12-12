@@ -9,7 +9,7 @@ class Planet:
 class System:
 
     def __init__(self,_input):
-        pass
+        self.planets = None
 
 
 def parse_input(x):
