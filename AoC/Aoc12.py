@@ -1,5 +1,6 @@
 import re
 from itertools import product
+import numpy as np
 
 def delta(n):
     if n < 0 :
@@ -31,6 +32,9 @@ class Planet:
     def log_planet(self):
         self.logp.append(self.position)
         self.logv.append(self.velocity)
+
+    def find_periods(self):
+        return np.array(self.logp)
 
 class System:
 
