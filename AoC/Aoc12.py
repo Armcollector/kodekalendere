@@ -14,9 +14,9 @@ class System:
     def create_planets(self, _input):
         pass
 
-def parse_input(x):
+    def parse_input(self,x):
 
-    return [ [int(i) for i in re.findall('(-*[0-9]+)',l)] for l in x.splitlines() ]
+        return [ [int(i) for i in re.findall('(-*[0-9]+)',l)] for l in x.splitlines() ]
 
 if __name__ == '__main__':
     pass
