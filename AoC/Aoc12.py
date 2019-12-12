@@ -64,13 +64,18 @@ class System:
     
 if __name__ == '__main__':
 
+    from time import time
+
     s = System("""<x=-7, y=17, z=-11>
 <x=9, y=12, z=5>
 <x=-9, y=0, z=-4>
 <x=4, y=6, z=0>""")
 
-    for i in range(2722):
+    start = time()
+
+    for i in range(1000):
         s.step()
 
     print(s)
     print(s.total_energy())
+    print(time()-start)
