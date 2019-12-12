@@ -34,7 +34,7 @@ class Planet:
         self.logv.append(self.velocity)
 
     def find_periods(self):
-        return self.cycle(np.array(self.logp)[:,0])
+        return [self.cycle(np.array(self.logp)[:,i]) for i in range(3)] + [self.cycle(np.array(self.logv)[:,i]) for i in range(3)]
   
     def cycle(self, a):
 
