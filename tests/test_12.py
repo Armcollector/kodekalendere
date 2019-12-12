@@ -7,4 +7,4 @@ def test_planet():
 def test_parse():
     from AoC.Aoc12 import parse_input
 
-    parse_input("<x=-7, y=17, z=-11>")
+    r = parse_input("<x=-7, y=17, z=-11>")
