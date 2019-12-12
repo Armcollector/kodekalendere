@@ -13,6 +13,8 @@ class Planet:
     def __init__(self, position ):
         self.position = position
         self.velocity = [0,0,0]
+        self.logp = []
+        self.logv = []
 
     def energy(self ):
         return sum(abs(i) for i in self.position) * sum(abs(i) for i in self.velocity)
