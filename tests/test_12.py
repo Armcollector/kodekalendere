@@ -24,3 +24,4 @@ def test_system():
 <x=4, y=6, z=0>""")
 
     assert len(p.planets) == 4
+    assert all(isinstance(i, Planet) for i in p.planets)
