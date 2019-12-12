@@ -55,7 +55,7 @@ class System:
     def __repr__(self):
         s = ""
         for i in self.planets:
-            s += str(i)
+            s += str(i) +"\n"
         return s
     
 if __name__ == '__main__':
