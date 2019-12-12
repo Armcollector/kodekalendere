@@ -80,7 +80,7 @@ if __name__ == '__main__':
 
     for i in range(20):
         s.step()
-        print(s.planets[0].position[0])
+        print(s.planets[1].position[0])
 
     print(s)
     print(s.total_energy())
