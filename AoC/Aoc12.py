@@ -41,7 +41,11 @@ class System:
     def apply_gravity(self):
         for m1, m2 in product(self.planets, self.planets):
             m1.apply_gravity(m2)
-        
+
+    def apply_velocity(self):
+        for m in self.planets:
+            m.apply_velocity()
+                    
 
 if __name__ == '__main__':
     pass
