@@ -2,7 +2,11 @@ import re
 from itertools import product
 
 def delta(n):
-    pass
+    if n < 0 :
+        return -1
+    if n == 0:
+        return 0
+    return 1
 
 class Planet:
     
