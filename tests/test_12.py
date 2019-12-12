@@ -1,7 +1,7 @@
 from AoC.Aoc12 import Planet
 
 def test_planet():
-    p = Planet()
+    p = Planet([0,0,0])
 
 
 def test_parse():
