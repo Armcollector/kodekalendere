@@ -10,6 +10,7 @@ class Planet:
     def energy(self ):
         return sum(abs(i) for i in self.position) * sum(abs(i) for i in self.velocity)
 
+    
 
 class System:
 
@@ -25,6 +26,11 @@ class System:
 
     def total_energy(self):
         return sum( i.energy() for i in self.planets)
+
+    def apply_gravity(self):
+        for m1, m2 in product(self.planets, self.planets):
+            m1.apply_gravity(m2)
+        
 
 if __name__ == '__main__':
     pass
