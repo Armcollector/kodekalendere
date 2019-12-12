@@ -48,7 +48,7 @@ class System:
     
     def step(self):
         self.apply_gravity()
-        self.apply_velocity
+        self.apply_velocity()
     
 if __name__ == '__main__':
     pass
