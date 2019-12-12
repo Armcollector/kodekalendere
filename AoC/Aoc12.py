@@ -104,8 +104,10 @@ if __name__ == '__main__':
 
     for i in range(1000):
         s.step()
-    
-    print("cycle", s.planets[0].find_periods())
+    c = []
+    for i in s.planets:
+        c+= i.find_periods()
+    print("cycle", c)
         
     print(s)
     print(s.total_energy())
