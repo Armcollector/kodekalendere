@@ -107,6 +107,8 @@ if __name__ == '__main__':
     c = []
     for i in s.planets:
         c+= i.find_periods()
+
+    
     print("cycle", c)
         
     print(s)
