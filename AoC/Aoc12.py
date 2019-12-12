@@ -78,7 +78,7 @@ if __name__ == '__main__':
 <x=4, y=-8, z=8>
 <x=3, y=5, z=-1>""")
 
-    for i in range(20):
+    for i in range(200):
         s.step()
         print(s.planets[1].position[0])
 
