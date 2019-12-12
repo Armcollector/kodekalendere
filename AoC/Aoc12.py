@@ -27,6 +27,7 @@ class System:
 
     def __init__(self,_input):
         self.planets = self.create_planets(_input)
+        self.steps = 0
 
     def create_planets(self, _input):
         return [Planet(i) for i in self.parse_input(_input)]
