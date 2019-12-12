@@ -50,6 +50,7 @@ class System:
     def step(self):
         self.apply_gravity()
         self.apply_velocity()
+        self.step +=1
 
     def __repr__(self):
         return "hello jupyter"
