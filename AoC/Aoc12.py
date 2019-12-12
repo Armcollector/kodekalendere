@@ -6,7 +6,7 @@ class Planet:
         self.position = position
         self.velocity = [0,0,0]
 
-    def energy():
+    def energy(self ):
         return sum(abs(i) for i in self.position) * sum(abs(i) for i in self.velocity)
 
 
@@ -21,6 +21,9 @@ class System:
     def parse_input(self,x):
 
         return [ [int(i) for i in re.findall('(-*[0-9]+)',l)] for l in x.splitlines() ]
+
+    def total_energy(self):
+        return sum( i.energy() for i in self.planets)
 
 if __name__ == '__main__':
     pass
