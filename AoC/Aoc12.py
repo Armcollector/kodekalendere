@@ -69,4 +69,6 @@ if __name__ == '__main__':
 <x=4, y=-8, z=8>
 <x=3, y=5, z=-1>""")
 
-    print(s)
+    for i in range(3):
+        print(s)
+        s.step()
