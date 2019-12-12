@@ -61,7 +61,15 @@ class System:
         for i in self.planets:
             s += str(i) +"\n"
         return s
-    
+
+def cycle(a):
+
+    k = 1
+    while True:
+        if all( a[i] == a[i+k] for i in range(len(a)-k) ):
+            return k
+        k+=1
+
 if __name__ == '__main__':
 
     from time import time
@@ -83,7 +91,7 @@ if __name__ == '__main__':
         s.step()
         t.append(s.planets[0].position[1])
         
-    print(t)
+    print(t,cycle(t))
     print(s)
     print(s.total_energy())
     print(time()-start)
