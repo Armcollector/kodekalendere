@@ -8,7 +8,7 @@ class Planet:
 
 
 def parse_input(x):
-    return [int(i) for i in re.findall('(-*[0-9]+)',"<x=-7, y=17, z=-11>")]
+    return [int(i) for i in re.findall('(-*[0-9]+)',x)]
 
 if __name__ == '__main__':
     pass
