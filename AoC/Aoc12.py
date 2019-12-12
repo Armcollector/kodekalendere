@@ -102,7 +102,7 @@ if __name__ == '__main__':
 <x=4, y=-8, z=8>
 <x=3, y=5, z=-1>""")
 
-    for i in range(10):
+    for i in range(1000):
         s.step()
     
     print("cycle", s.planets[0].find_periods())
