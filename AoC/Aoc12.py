@@ -107,7 +107,7 @@ if __name__ == '__main__':
 <x=2, y=-7, z=3>
 <x=9, y=-8, z=-3>""")
 
-    for i in range(5000):
+    for i in range(10000):
         s.step()
     c = []
     for i in s.planets:
