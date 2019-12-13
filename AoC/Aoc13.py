@@ -50,9 +50,11 @@ class SubRoutineGame:
             elif i == 2:
                 self.blocks.add( (x,y))
                 self.board[x,y] = i
-            else x == -1:
+            elif x == -1:
                 print(self.score, self.ball, self.paddle, len(self.blocks))
                 self.score = i  
+            else:
+                raise Exception("unknown code")
             
                 
             
