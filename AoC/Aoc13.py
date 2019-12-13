@@ -18,6 +18,7 @@ class SubRoutineGame:
     def __init__(self):
         self.machine = None
         self.board = np.zeros(43,23)
+        self.score = 0
 
     def attach_subroutine(self, machine):
         self.machine = machine
@@ -31,8 +32,11 @@ class SubRoutineGame:
         blocks = list(chunks(output,3))
         
         for x,y, i in blocks:
-            board[x,y] = i
-
+            if x == -1:
+                self.score = i
+            else:
+                board[x,y] = i
+            
         
 
 
