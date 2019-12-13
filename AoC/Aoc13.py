@@ -51,6 +51,7 @@ if __name__ == "__main__":
     for x,y, i in blocks:
         board[x,y] = i
 
+    print(x,y)
 
     unique, counts = np.unique(board, return_counts=True)
     dict(zip(unique, counts))
