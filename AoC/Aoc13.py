@@ -54,7 +54,7 @@ class SubRoutineGame:
                 print(self.score, self.ball, self.paddle, len(self.blocks))
                 self.score = i  
             else:
-                raise Exception("unknown code")
+                raise Exception(f"unknown code {i}" )
             
                 
             
