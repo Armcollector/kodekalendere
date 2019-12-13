@@ -32,6 +32,9 @@ class SubRoutineGame:
         blocks = list(chunks(output,3))
         
         for x,y, i in blocks:
+            if i == 4:
+                i = 0 #destroy block
+
             if x == -1:
                 self.score = i
             else:
