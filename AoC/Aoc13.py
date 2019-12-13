@@ -17,6 +17,7 @@ class SubRoutineGame:
 
     def __init__(self):
         self.machine = None
+        self.board = np.zeros(43,23)
 
     def attach_subroutine(self, machine):
         self.machine = machine
@@ -25,10 +26,12 @@ class SubRoutineGame:
         """ Consume output from machine 
             Run to next output
         """
-        new_output = self.machine.outputs
+        output = self.machine.outputs
         self.machine.outputs = []
-
-        blocks = None 
+        blocks = list(chunks(output,3))
+        
+        for x,y, i in blocks:
+            board[x,y] = i
 
         
 
