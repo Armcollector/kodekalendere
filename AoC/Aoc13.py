@@ -30,17 +30,27 @@ class SubRoutineGame:
         output = self.machine.outputs
         self.machine.outputs = []
         blocks = list(chunks(output,3))
-        
+        ball = -1
+        paddle = -1
         for x,y, i in blocks:
             if i == 4:
+                ball = x
                 i = 0 #destroy block
+            if i == 3:
+                paddle = x
 
             if x == -1:
                 self.score = i
             else:
                 board[x,y] = i
             
-        
+        print("ball", ball, "paddle", paddle)
+        if ball == paddle:
+            return 0
+        if ball < paddle:
+            return -1
+        if ball > paddle:
+            return 1
 
 
 def part1():
@@ -71,7 +81,7 @@ def part1():
 
     board *= (255//item)
     Image.fromarray(board.transpose()).show()
-    
+
 
 if __name__ == "__main__":
     part1()
