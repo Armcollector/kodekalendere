@@ -22,9 +22,15 @@ class SubRoutineGame:
         self.ball = -1
         self.paddle = -1
         self.blocks = set([])
+        self.steps = 0
 
     def attach_machine(self, machine):
         self.machine = machine
+
+    def draw(self):
+        board = m.subroutine.board
+        board[board > 0] = 255 
+        Image.fromarray(board.transpose()).show()
 
     def run(self):
         """ Consume output from machine 
@@ -43,11 +49,12 @@ class SubRoutineGame:
                 self.paddle = (x,y)
             elif i == 2:
                 self.blocks.add( (x,y))
-            elif x == -1:
+                self.board[x,y] = i
+            else x == -1:
                 print(self.score, self.ball, self.paddle, len(self.blocks))
                 self.score = i  
-            else:
-                self.board[x,y] = i
+            
+                
             
         #print("ball", self.ball, "paddle", self.paddle)
         bx = self.ball[0]
