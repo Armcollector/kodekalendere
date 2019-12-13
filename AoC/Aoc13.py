@@ -17,7 +17,7 @@ class SubRoutineGame:
 
     def __init__(self):
         self.machine = None
-        self.board = np.zeros(43,23)
+        self.board = np.zeros((43,23))
         self.score = 0
 
     def attach_subroutine(self, machine):
