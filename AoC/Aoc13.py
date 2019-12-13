@@ -25,7 +25,10 @@ class SubRoutineGame:
         """ Consume output from machine 
             Run to next output
         """
-        new_output = self.machine.output_and_clear()
+        new_output = self.machine.outputs
+        self.machine.outputs = []
+
+        blocks = None 
 
         
 
