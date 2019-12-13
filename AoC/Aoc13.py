@@ -17,9 +17,7 @@ if __name__ == "__main__":
     m.intcode()
     output = m.outputs
 
-    blocks = chunks(output,3)
-    print(len(blocks))
-
+    
     blocks = list(chunks(output,3))
 
     import numpy as np
