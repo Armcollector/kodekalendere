@@ -41,9 +41,6 @@ class SubRoutineGame:
         blocks = list(chunks(output,3))
         self.steps += 1
 
-        if self.steps % 100 == 0:
-            self.draw()
-
         for x,y, i in blocks:
             if i == 4:
                 self.ball = (x,y)
@@ -117,4 +114,5 @@ if __name__ == "__main__":
     board = m.subroutine.board
     board[board > 0] = 255 
     Image.fromarray(board.transpose()).show()
-    
+
+    print(m.outputs)
