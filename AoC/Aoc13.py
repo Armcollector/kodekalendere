@@ -42,10 +42,11 @@ class SubRoutineGame:
 
             if x == -1:
                 self.score = i
+                print(self.score)
             else:
                 self.board[x,y] = i
             
-        print("ball", self.ball, "paddle", self.paddle)
+        #print("ball", self.ball, "paddle", self.paddle)
         if self.ball == self.paddle:
             return 0
         if self.ball < self.paddle:
