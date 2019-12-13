@@ -20,4 +20,26 @@ if __name__ == "__main__":
     blocks = chunks(output,3)
     print(len(blocks))
 
-    
+    blocks = list(chunks(output,3))
+
+    import numpy as np
+    board = np.array(blocks)
+
+    x,y, item = np.amax(board,axis=0)
+
+    board = np.zeros((x+1,y+1))
+
+    for x,y, i in blocks:
+        board[x,y] = i
+
+
+        
+
+
+    unique, counts = np.unique(board, return_counts=True)
+    dict(zip(unique, counts))
+
+    from PIL import Image
+
+    board *= (255//item)
+    Image.fromarray(board).show()
