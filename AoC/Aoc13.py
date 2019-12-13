@@ -42,7 +42,7 @@ class SubRoutineGame:
 
             if x == -1:
                 self.score = i
-                unique, counts = np.unique(board, return_counts=True)
+                unique, counts = np.unique(self.board, return_counts=True)
                 left = dict(zip(unique, counts))
                 print(self.score, left[2])
 
