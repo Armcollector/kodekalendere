@@ -21,7 +21,12 @@ class SubRoutineGame:
     def attach_subroutine(self, machine):
         self.machine = machine
 
-    
+    def run():
+        """ Consume output from machine 
+            Run to next output
+        """
+        new_output = self.machine.output_and_clear()
+
         
 
 if __name__ == "__main__":
