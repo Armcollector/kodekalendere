@@ -98,6 +98,6 @@ if __name__ == "__main__":
     m.intcode()
 
     board = m.subroutine.board
-    board *= (255//item)
+    board *= (255//5)
     Image.fromarray(board.transpose()).show()
     
