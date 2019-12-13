@@ -39,7 +39,11 @@ class SubRoutineGame:
         output = self.machine.outputs
         self.machine.outputs = []
         blocks = list(chunks(output,3))
-        
+        self.steps += 1
+
+        if self.steps % 100 == 0:
+            self.draw()
+
         for x,y, i in blocks:
             if i == 4:
                 self.ball = (x,y)
