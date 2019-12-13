@@ -3,7 +3,7 @@ from itertools import permutations
 
 class IntCoder:
 
-    def __init__(self, x, inputs = [], name = None):
+    def __init__(self, x, inputs = [], name = None, subroutine= None):
         self.x = x + [0]*10**6
         self.ops = {1: self.add,
                     2: self.mul,
@@ -21,6 +21,7 @@ class IntCoder:
         self.halted = False
         self.name = name
         self.relative_base=0
+        self.subroutine = subroutine
 
     def parameter(self, pnr, ps,assignment=False):
         if not assignment:        
