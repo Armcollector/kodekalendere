@@ -50,6 +50,8 @@ class SubRoutineGame:
             elif i == 2:
                 self.blocks.add( (x,y))
                 self.board[x,y] = i
+            elif i == 1:
+                self.board[x,y] = i
             elif x == -1:
                 print(self.score, self.ball, self.paddle, len(self.blocks))
                 self.score = i  
