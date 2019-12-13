@@ -37,7 +37,8 @@ class SubRoutineGame:
         for x,y, i in blocks:
             if i == 4:
                 self.ball = (x,y)
-                self.blocks.remove((x,y))
+                if (x,y) in self.blocks:
+                    self.blocks.remove((x,y))
                 i = 4 #destroy block
             elif i == 3:
                 self.paddle = (x,y)
