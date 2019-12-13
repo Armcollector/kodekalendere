@@ -19,6 +19,8 @@ class SubRoutineGame:
         self.machine = None
         self.board = np.zeros((43,23))
         self.score = 0
+        self.ball = -1
+        self.paddle = -1
 
     def attach_machine(self, machine):
         self.machine = machine
@@ -30,26 +32,25 @@ class SubRoutineGame:
         output = self.machine.outputs
         self.machine.outputs = []
         blocks = list(chunks(output,3))
-        ball = -1
-        paddle = -1
+        
         for x,y, i in blocks:
             if i == 4:
-                ball = x
+                self.ball = x
                 i = 0 #destroy block
             if i == 3:
-                paddle = x
+                self.paddle = x
 
             if x == -1:
                 self.score = i
             else:
-                board[x,y] = i
+                self.board[x,y] = i
             
-        print("ball", ball, "paddle", paddle)
-        if ball == paddle:
+        print("ball", self.ball, "paddle", self.paddle)
+        if self.ball == self.paddle:
             return 0
-        if ball < paddle:
+        if self.ball < self.paddle:
             return -1
-        if ball > paddle:
+        if self.ball > self.paddle:
             return 1
 
 
