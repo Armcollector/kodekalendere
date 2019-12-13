@@ -39,7 +39,6 @@ class SubRoutineGame:
                 self.ball = (x,y)
                 if (x,y) in self.blocks:
                     self.blocks.remove((x,y))
-                i = 4 #destroy block
             elif i == 3:
                 self.paddle = (x,y)
             elif i == 2:
@@ -97,4 +96,8 @@ if __name__ == "__main__":
     s = SubRoutineGame()
     m = ic.IntCoder(p,subroutine=s)
     m.intcode()
+
+    board = m.subroutine.board
+    board *= (255//item)
+    Image.fromarray(board.transpose()).show()
     
