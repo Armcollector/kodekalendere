@@ -21,7 +21,9 @@ class IntCoder:
         self.halted = False
         self.name = name
         self.relative_base=0
-        self.subroutine = subroutine
+        if subroutine:
+            self.subroutine = subroutine
+            self.subroutine.attach_machine(self)
 
     def parameter(self, pnr, ps,assignment=False):
         if not assignment:        
