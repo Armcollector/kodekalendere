@@ -70,7 +70,8 @@ def part1():
 
 
     board *= (255//item)
-    Image.fromarray(board).show()
+    Image.fromarray(board.transpose()).show()
+    
 
 if __name__ == "__main__":
     part1()
