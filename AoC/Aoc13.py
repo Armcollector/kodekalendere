@@ -51,11 +51,11 @@ class SubRoutineGame:
         #print("ball", self.ball, "paddle", self.paddle)
         bx = self.ball[0]
         px = self.paddle[0]
-        if bx == by:
+        if bx == px:
             return 0
-        if bx < by:
+        if bx < px:
             return -1
-        if bx > by:
+        if bx > px:
             return 1
 
 
