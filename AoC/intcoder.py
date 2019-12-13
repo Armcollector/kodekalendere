@@ -92,10 +92,11 @@ class IntCoder:
         return i + 4
 
     def inp(self, i, ps=[0, 0, 0]):
-        if not self.inputs:
-            _in = int(input("Enter input: "))
-        else:
+        if self.inputs:
             _in = self.inputs.popleft()
+        else:
+            _in = int(input("Enter input: "))
+            
         
         p1 = self.parameter(1,ps,True)
         self.x[p1] = _in
