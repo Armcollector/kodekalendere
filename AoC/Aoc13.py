@@ -15,8 +15,13 @@ def chunks(lst, num_elements):
 
 class SubRoutineGame:
 
-    def __init__(self, machine):
+    def __init__(self):
+        self.machine = None
+
+    def attach_subroutine(self, machine):
         self.machine = machine
+
+    
         
 
 if __name__ == "__main__":
