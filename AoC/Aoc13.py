@@ -33,9 +33,6 @@ if __name__ == "__main__":
         board[x,y] = i
 
 
-        
-
-
     unique, counts = np.unique(board, return_counts=True)
     dict(zip(unique, counts))
 
