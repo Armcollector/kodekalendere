@@ -98,7 +98,7 @@ class IntCoder:
         if self.inputs:
             _in = self.inputs.popleft()
         elif self.subroutine:
-            _in = self.subroutine()
+            _in = self.subroutine.run()
         else:
             _in = int(input("Enter input: "))
             
