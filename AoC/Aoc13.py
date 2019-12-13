@@ -21,6 +21,7 @@ class SubRoutineGame:
         self.score = 0
         self.ball = -1
         self.paddle = -1
+        self.blocks = set([])
 
     def attach_machine(self, machine):
         self.machine = machine
@@ -36,15 +37,15 @@ class SubRoutineGame:
         for x,y, i in blocks:
             if i == 4:
                 self.ball = (x,y)
-                i = 0 #destroy block
-            if i == 3:
+                self.blocks.remove((x,y))
+                i = 4 #destroy block
+            elif i == 3:
                 self.paddle = (x,y)
-
-            if x == -1:
-                print(self.score, self.ball, self.paddle)
-                self.score = i
-                
-                
+            elif i == 2:
+                self.blocks.add( (x,y))
+            elif x == -1:
+                print(self.score, self.ball, self.paddle, len(blocks))
+                self.score = i  
             else:
                 self.board[x,y] = i
             
