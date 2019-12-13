@@ -41,11 +41,11 @@ class SubRoutineGame:
                 self.paddle = x
 
             if x == -1:
-                self.score = i
                 unique, counts = np.unique(self.board, return_counts=True)
                 left = dict(zip(unique, counts))
-                print(self.score, left[2])
-
+                print(i, self.score, left[2])
+                self.score = i
+                
                 
             else:
                 self.board[x,y] = i
