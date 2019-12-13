@@ -35,10 +35,10 @@ class SubRoutineGame:
         
         for x,y, i in blocks:
             if i == 4:
-                self.ball = x
+                self.ball = (x,y)
                 i = 0 #destroy block
             if i == 3:
-                self.paddle = x
+                self.paddle = (x,y)
 
             if x == -1:
                 print(self.score, self.ball, self.paddle)
@@ -49,11 +49,13 @@ class SubRoutineGame:
                 self.board[x,y] = i
             
         #print("ball", self.ball, "paddle", self.paddle)
-        if self.ball == self.paddle:
+        bx = self.ball[0]
+        px = self.paddle[0]
+        if bx == by:
             return 0
-        if self.ball < self.paddle:
+        if bx < by:
             return -1
-        if self.ball > self.paddle:
+        if bx > by:
             return 1
 
 
