@@ -23,7 +23,7 @@ class SubRoutineGame:
     def attach_machine(self, machine):
         self.machine = machine
 
-    def run():
+    def run(self):
         """ Consume output from machine 
             Run to next output
         """
