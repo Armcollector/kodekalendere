@@ -145,8 +145,8 @@ if __name__ == '__main__':
     
     l,r = binarySearch(f, low,high, 10**12)
     
-    print(f(l))
-    print(f(r))
+    print(l,f(l))
+    print(r,f(r))
         
 
 
