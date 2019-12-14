@@ -107,6 +107,10 @@ class Factory:
 
 
 
+def f(n):
+    fac = Factory(puzzle_input)
+    fac.produce("FUEL",n)
+    return fac.ore_used
 
 def binarySearch (f, l, r, x): 
 
@@ -127,7 +131,7 @@ def binarySearch (f, l, r, x):
         # Else the element can only be present  
         # in right subarray 
         else: 
-            return binarySearch(arr, mid + 1, r, x) 
+            return binarySearch(f, mid + 1, r, x) 
 
     else: 
         # Element is not present in the array 
@@ -136,12 +140,11 @@ def binarySearch (f, l, r, x):
 
 
 if __name__ == '__main__':
+    low = 1000000
+    high = 10000000
     
-    
-    
-    f = Factory(puzzle_input)
-    f.produce("FUEL",10000000)
-    used, have = f.ore_used, f.have
-    print(used,  10**12-used)
+    while low < high:
+        
+        
 
 
