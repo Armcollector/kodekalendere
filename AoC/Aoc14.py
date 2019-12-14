@@ -108,7 +108,7 @@ class Factory:
 
 
 
-def binarySearch (arr, l, r, x): 
+def binarySearch (f, l, r, x): 
 
     # Check base case 
     if r >= l: 
@@ -116,13 +116,13 @@ def binarySearch (arr, l, r, x):
         mid = l + (r - l)/2
 
         # If element is present at the middle itself 
-        if arr[mid] == x: 
+        if f(mid) == x: 
             return mid 
             
         # If element is smaller than mid, then it  
         # can only be present in left subarray 
-        elif arr[mid] > x: 
-            return binarySearch(arr, l, mid-1, x) 
+        elif f(mid) > x: 
+            return binarySearch(f, l, mid-1, x) 
 
         # Else the element can only be present  
         # in right subarray 
