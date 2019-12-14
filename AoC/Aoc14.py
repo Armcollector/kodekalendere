@@ -96,15 +96,13 @@ class Factory:
         amount_needed = amount - self.have.get(chem,0) 
         amount_one_reaction = self.reactions[chem]["amount"]
         times_reaction = math.ceil(amount_needed / amount_one_reaction)
-        print(chem, amount_needed, amount_one_reaction, times_reaction)
-
-        while amount > self.have.get(chem,0):
-            amount_one_reaction = self.reactions[chem]["amount"]
+        
+        if amount_needed > 0:
             production_list = self.reactions[chem]["requirement"]
             for c, a in production_list:
-                self.produce(c,a)
-            self.have[chem] = self.have.get(chem,0) + amount_one_reaction
-        
+                self.produce(c, a*times_reaction)            
+            self.have[chem] = self.have.get(chem,0) + amount_one_reaction*times_reaction
+
         self.have[chem] -= amount
 
 
