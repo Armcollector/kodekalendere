@@ -97,6 +97,7 @@ class Factory:
         amount_one_reaction = self.reactions[chem]["amount"]
         times_reaction = math.ceil(amount_needed / amount_one_reaction)
         print(chem, amount_needed, amount_one_reaction, times_reaction)
+
         while amount > self.have.get(chem,0):
             amount_one_reaction = self.reactions[chem]["amount"]
             production_list = self.reactions[chem]["requirement"]
@@ -110,6 +111,6 @@ class Factory:
 
 if __name__ == '__main__':
     f = Factory(puzzle_input)
-    f.produce("FUEL",1)
+    f.produce("FUEL",100)
     used, have = f.ore_used, f.have
     print(used, have)
