@@ -135,7 +135,7 @@ def binarySearch (f, l, r, x):
 
     else: 
         # Element is not present in the array 
-        return -1
+        return l,r
 
 
 
