@@ -137,7 +137,7 @@ def binarySearch (arr, l, r, x):
 
 if __name__ == '__main__':
     f = Factory(puzzle_input)
-    f.produce("FUEL",2000000)
+    f.produce("FUEL",1000000)
     used, have = f.ore_used, f.have
     print(used,  10**12-used)
 
