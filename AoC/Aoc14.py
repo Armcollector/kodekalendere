@@ -117,7 +117,7 @@ def binarySearch (f, l, r, x):
     # Check base case 
     if r >= l: 
 
-        mid = l + (r - l)/2
+        mid = l + (r - l)//2
 
         # If element is present at the middle itself 
         if f(mid) == x: 
