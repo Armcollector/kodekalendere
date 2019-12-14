@@ -143,7 +143,7 @@ if __name__ == '__main__':
     low = 1000000
     high = 10000000
     
-    
+    binarySearch(f, low,high, 10**12)
         
         
 
