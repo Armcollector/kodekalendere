@@ -143,8 +143,10 @@ if __name__ == '__main__':
     low = 1000000
     high = 10000000
     
-    print(binarySearch(f, low,high, 10**12))
-        
+    l,r = binarySearch(f, low,high, 10**12)
+    
+    print(f(l))
+    print(f(r))
         
 
 
