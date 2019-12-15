@@ -2,77 +2,60 @@ import AoC.intcoder as ic
 import networkx as nx
 
 
-
-class Robot:
-    
-    def __init__(self, priority):
-        self.position = (0,0)
-        self.priority = priority
-        self.steps = 0
-        self.log = set([])
-        self.dir = { 'syd': (1,0), 'aust': (0,1), 'nord': (-1,0), 'vest' : (0,-1) }
-        self.stack = []
-    
-    def halted(self):
-        return self.position == (499,499)
-    
-    def been(self, i):
-        dy,dx = self.dir[i]
-        y,x = self.position
-        newposition = (y+dy,x+dx)
-        return newposition in self.log
-    
-    def blocked(self, i):
-        y,x = self.position
-        return rooms[y][x][i]
-
-    
-    def move(self):
-        for i in self.priority:
-            if self.been(i):
-                continue
-            if self.blocked(i):
-                continue
-            dy,dx = self.dir[i]
-            y,x = self.position
-            self.position = (y+dy,x+dx)
-            self.log.add(self.position)
-            self.stack.append(self.position)
-            self.steps +=1
-            return
-        
-        self.stack.pop()
-        self.position = self.stack[-1]
-    
-        
-    def __repr__(self):
-        y,x = self.position
-        return f"robot pos={self.position} room= {rooms[y][x]}"
-
 class SubRoutineRepairRobot:
 
     def __init__(self):
         self.machine = None
         self.graph = nx.Graph()
         self.position = (0,0)
-        self.last_command = 1
-        self.stack = []
+        self.last_command = 4
+        self.last_move = None
         self.walls = set([])
-
+        self.visited = set([(0,0)])
+        self.stack = []
         self.dir = { 4: (1,0), 1: (0,1), 3: (-1,0), 2: (0,-1) }
+        self.walking_back = False
         
 
     def attach_machine(self, machine):
         self.machine = machine
 
-    def add_wall()
-        pass
+    def attempted_position(self, direction):
+        dx,dy = self.dir[direction]
+        x,y = self.position
+        newposition = (x+dx,y+dy)
+        return newposition
 
-    def add_corridor()
-        pass
+    def add_wall(self):
+        #print(f"adding {self.attempted_position(self.last_command)} as wall")
+        self.walls.add(self.attempted_position(self.last_command))
+
+    def add_corridor(self):
+        self.graph.add_edge(self.position, self.attempted_position(self.last_command))
     
-    def update_position()
-        pass
+    def update_position(self):
+        newpos = self.attempted_position(self.last_command)
+        oldpos = self.position
+        self.position = newpos
+        #print(f"moving from {oldpos} to {newpos}")
+
+    def go_back_to_stack(self):
+        reverse = {4:3, 3:4, 1:2, 2:1}
+        self.walking_back = True
+        return reverse[self.stack[-1]]
+
+    def move(self):
+        self.add_corridor()
+        self.update_position()
+
+        if self.position in self.visited:
+            # have been here before and is the process of walking back
+            # pop stack
+            self.stack.pop()
+        else:
+            self.visited.add(self.position)
+            self.stack.append(self.last_command)
+        
 
 
     def run(self):
@@ -82,27 +65,47 @@ class SubRoutineRepairRobot:
         output = self.machine.outputs
         self.machine.outputs = []
 
+        #print("output", output)
+        #print(self.stack)
+        
         if not output:
-            # Starting
-            return 1
+            output = -1
         else:
             output = output[0]
 
         if output == 0:
-            add_wall()
-        if output == 1:
-            add_corridor()
-            update_position()
+            "that was a wall"
+            self.add_wall()
+        elif output == 1:
+            self.move()
         elif output == 2:
-            add_corridor()
-            update_position()
+            self.move()
             print("found oxygen at ", self.position)
+            print(len(nx.shortest_path(self.graph ,(0,0), self.position ))-1)
             return None
+        elif output == -1:
+            #no action, starting
+            pass
         else:
-            raise ValueError
+            raise ValueError(f"unknown value {output}")
 
-        
+        for i in self.dir.keys():
+            newpos = self.attempted_position(i)
+            
+            if newpos in self.walls:
+                pass
+            elif newpos in self.visited:
+                pass
+            else:               
+                self.last_command = i
+                #print("command", i)
+                return i
 
+        go_back = self.go_back_to_stack()
+        self.last_command = go_back
+
+
+        return go_back
 
  
 if __name__ == "__main__":
