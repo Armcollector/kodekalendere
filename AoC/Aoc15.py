@@ -82,7 +82,7 @@ class SubRoutineRepairRobot:
             self.move()
             print("found oxygen at ", self.position)
             print(len(nx.shortest_path(self.graph ,(0,0), self.position ))-1)
-            return None
+
         elif output == -1:
             #no action, starting
             pass
@@ -100,6 +100,14 @@ class SubRoutineRepairRobot:
                 self.last_command = i
                 #print("command", i)
                 return i
+
+        if self.stack == []:
+            print("done mapping")
+            print(max( len(nx.shortest_path(self.graph ,(18,-18), i )) -1  for i in self.graph.nodes()))
+
+
+
+            return None
 
         go_back = self.go_back_to_stack()
         self.last_command = go_back
