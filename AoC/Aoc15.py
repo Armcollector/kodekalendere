@@ -104,6 +104,7 @@ class SubRoutineRepairRobot:
         if self.stack == []:
             print("done mapping")
             print(max( len(nx.shortest_path(self.graph ,(18,-18), i )) -1  for i in self.graph.nodes()))
+            print( min(x for x,y in self.walls), min(y for x,y in self.walls), max(x for x,y in self.walls),  max(y for x,y in self.walls) ) 
 
 
 
