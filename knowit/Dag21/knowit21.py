@@ -19,9 +19,10 @@ def solve(generasjoner):
             newset[a] = newset[a].union(sets[i])    
             newset[b] = newset[b].union(sets[i])
 
-        for alv, s in enumerate(newset):
-            if len(s) == antall_alver//2:
-                return f"{gn}:{alv} er løsningen."
+        if 2**(gn+1) >= antall_alver//2:
+            for alv, s in enumerate(newset):
+                if len(s) == antall_alver//2:
+                    return f"{gn}:{alv} er løsningen."
 
         sets = newset
     
